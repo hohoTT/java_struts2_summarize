@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+C:\Users\Administrator\Desktop\WT\java_struts2_summarize\.metadata\.plugins\org.eclipse.jdt.core
+2146026525.index
