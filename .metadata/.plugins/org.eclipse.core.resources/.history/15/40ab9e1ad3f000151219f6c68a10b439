@@ -1,0 +1,44 @@
+package com.wt.hello;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * Servlet Filter implementation class FilterDispatcher
+ */
+@WebFilter({ "/FilterDispatcher", "*.action" })
+public class FilterDispatcher implements Filter {
+	
+	public void destroy() {}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		HttpServletRequest req = (HttpServletRequest) request;
+		
+		// 1. 获取 servletPath
+		String servletPath = req.getServletPath();
+		System.out.println("servletPath---------" + servletPath);
+		
+		String path = null;
+		
+		// 2. 判断 servletPath，若其等于"product-input.action"，则转发到//WEB-IBF//pages/input.jsp
+		if("/product-input.action".equals(servletPath)){
+			
+		}
+		
+		// 3. 若其等于"/product-save.action"
+		
+		chain.doFilter(request, response);
+	}
+
+	public void init(FilterConfig fConfig) throws ServletException {}
+
+}

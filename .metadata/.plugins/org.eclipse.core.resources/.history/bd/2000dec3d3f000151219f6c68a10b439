@@ -8,7 +8,15 @@
 </head>
 <body>
 
-	<form action=""></form>
+	<form action="product-save.action" method="post">
+		
+		ProductName: <input type="text" name="productName"/>
+		<br><br>
+		
+		ProductDoc: <input type="text" name="productDoc"/>
+		<br><br>
+		
+	</form>
 
 </body>
 </html>

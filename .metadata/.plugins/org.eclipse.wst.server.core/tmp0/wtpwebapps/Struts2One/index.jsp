@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<a href="production-input.action">Production Input</a>
+	<a href="product-input.action">Production Input</a>
 
 </body>
 </html>
