@@ -23,20 +23,10 @@
 		<!-- 
 			配置一个 action: 一个 Struts2 的情求就是一个 action
 			name: 对应一个 Struts2 请求的名字（或者对应一个 servletPath，但去除 / 和扩展名），不包括扩展名
-			class 的默认值为 com.opensymphony.xwork2.ActionSupport
-			method 的默认值为 execute
 			result: 结果
 		 -->
-		<action name="product-input"
-				class="com.opensymphony.xwork2.ActionSupport"  
-				method="execute" >
-			<!-- 
-				result: 结果，表示 action 方法执行后可能返回的一个结果，所以一个 action 节点可能会有多个 result 子节点，
-				多个 result 子节点使用 name 来区分
-				name: 标示一个 result， 和 action 方法的返回值对应，默认值为 success 
-				dispatcher: 表示结果的类型，默认值为 dispatcher(转发到结果)
-			 -->
-			<result name="success" type="dispatcher">/WEB-INF/pages/input.jsp</result>
+		<action name="product-input">
+			<result>/WEB-INF/pages/input.jsp</result>
 		</action>
 		
 		<action name="product-save" class="com.wt.hello.Product" method="save">

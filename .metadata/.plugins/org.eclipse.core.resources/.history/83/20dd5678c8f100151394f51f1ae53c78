@@ -33,10 +33,9 @@
 			<!-- 
 				result: 结果，表示 action 方法执行后可能返回的一个结果，所以一个 action 节点可能会有多个 result 子节点，
 				多个 result 子节点使用 name 来区分
-				name: 标示一个 result， 和 action 方法的返回值对应，默认值为 success 
-				dispatcher: 表示结果的类型，默认值为 dispatcher(转发到结果)
+				name: 标示一个
 			 -->
-			<result name="success" type="dispatcher">/WEB-INF/pages/input.jsp</result>
+			<result name="success">/WEB-INF/pages/input.jsp</result>
 		</action>
 		
 		<action name="product-save" class="com.wt.hello.Product" method="save">

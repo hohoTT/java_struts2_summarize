@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<!-- 
+		package: 包，Struts2 使用 package 来组织模块，
+		name属性: 必须，用于其他的包应用当前包
+		extends: 当前包继承那个包，继承的，即可以继承其中的所有的配置，通常情况下继承 struts-default
+		
+				struts-default 在 struts-default.xml 中定义
+	 -->
+	<package name="hello" extends="struts-default">
+		
+		<!-- 
+			配置一个 action: 一个 Struts2 的情求就是一个 action
+			name: 对应一个 Struts2 请求的名字（或者对应一个 servletPath，但去除 / 和扩展名），不包括扩展名
+			result: 结果
+		 -->
+		<action name="product-input">
+			<result>/WEB-INF/pages/input.jsp</result>
+		</action>
+		
+		<action name="product-save" class="com.wt.hello.Product" method="save">
+			<result name="details">/WEB-INF/pages/details.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
