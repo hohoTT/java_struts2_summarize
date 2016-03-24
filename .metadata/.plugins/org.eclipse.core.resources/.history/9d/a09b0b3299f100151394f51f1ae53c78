@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<!-- 
+		package: 包，Struts
+		name属性: 必须，用于其他的包应用当前包
+	 -->
+	<package name="hello" extends="struts-default"></package>
+
+</struts>

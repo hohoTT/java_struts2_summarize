@@ -1,0 +1,19 @@
+1. 与之前 Filter 作为控制器实现 MVC的区别
+
+1>. 搭建 Struts 的开发环境
+
+2>. 不需要显示的定义 Filter, 而是用的是 Struts2 的配置文件
+
+3>. details.jsp 比之前的简单
+
+举例： 之前的 ${requestScope.product.productId} 变成了 现在的    ${productId}
+
+4>. 步骤：
+
+	1. 由 product-input.action 转到 /WEB-INF/pages/input.jsp
+	
+	在 Struts2 中配置一个 action
+	
+	<action name="product-input">
+			<result>/WEB-INF/pages/input.jsp</result>
+		</action>
