@@ -35,10 +35,5 @@
 			
 			1>. 使用 ActionContext
 			
-			2>. 实现 XXXAware 接口
-			
 		② 和 Servlet API 耦合的方式：可以访问更多的  Servlet API 对象，且可以调用原生的方法
-			
-			1>. 使用 ServletActionContext
-			
-			2>. 实现 ServletXXXAware 接口
+

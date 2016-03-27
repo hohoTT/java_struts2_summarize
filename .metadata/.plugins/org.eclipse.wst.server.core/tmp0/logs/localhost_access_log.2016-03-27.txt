@@ -7,3 +7,8 @@
 127.0.0.1 - - [27/Mar/2016:10:28:18 +0800] "POST /StrustsCollocationDemo/hohoTT/product-save.action HTTP/1.1" 200 531
 127.0.0.1 - - [27/Mar/2016:10:28:29 +0800] "POST /StrustsCollocationDemo/hohoTT/product-save.action HTTP/1.1" 200 527
 127.0.0.1 - - [27/Mar/2016:10:28:56 +0800] "POST /StrustsCollocationDemo/hohoTT/product-save.action HTTP/1.1" 200 520
+127.0.0.1 - - [27/Mar/2016:17:03:23 +0800] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [27/Mar/2016:17:03:25 +0800] "GET /StrustActionDemo/ HTTP/1.1" 404 1173
+127.0.0.1 - - [27/Mar/2016:17:03:31 +0800] "GET /StrustActionDemo/ HTTP/1.1" 404 1173
+127.0.0.1 - - [27/Mar/2016:17:03:32 +0800] "GET /StrustActionDemo/ HTTP/1.1" 404 1173
+127.0.0.1 - - [27/Mar/2016:17:03:32 +0800] "GET /StrustActionDemo/ HTTP/1.1" 404 1173
