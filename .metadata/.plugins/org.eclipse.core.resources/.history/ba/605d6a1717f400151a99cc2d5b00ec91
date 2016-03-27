@@ -1,0 +1,33 @@
+package com.wt.action;
+
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionContext;
+
+public class TestActionContextAction {
+	
+	public String execute(){
+		
+		// 0. 获取 ActionContext 对象
+		// ActionContext 是 Action 的上下文对象，可以从中获取到往 Action 需要的一切信息
+		
+		ActionContext actionContext = ActionContext.getContext();
+		
+		// 1. 获取application 对应的 Map，并向其中添加一个属性
+		Map<String, Object> applicationMap = actionContext.getApplication();
+		applicationMap.put("applicationKey", "applicationValue");
+		
+		// 获取属性
+		Object date = applicationMap.get("date");
+		System.out.println("date ---- " + date);
+		
+		// 2. session
+		
+		// 3. request
+		
+		// 4. 获取请求参数对应的 Map，并获取指定的参数值
+		
+		return "success";
+	}
+
+}
