@@ -1,0 +1,6 @@
+1. 搭建 Struts2 的开发环境： 三个步骤
+
+2. action 与 Action 类：
+
+	1>. action 代表一个 Struts2 的请求
+
