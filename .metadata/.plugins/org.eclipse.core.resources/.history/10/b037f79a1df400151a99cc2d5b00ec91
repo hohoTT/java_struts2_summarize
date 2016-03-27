@@ -1,0 +1,11 @@
+package com.wt.action;
+
+public class TestAwareAction {
+	
+	public String execute(){
+		
+		
+		return "success";
+	}
+
+}

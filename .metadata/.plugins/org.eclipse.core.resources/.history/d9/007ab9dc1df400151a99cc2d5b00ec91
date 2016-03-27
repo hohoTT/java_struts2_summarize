@@ -1,0 +1,14 @@
+package com.wt.action;
+
+public class TestAwareAction {
+	
+	
+	public String execute(){
+		
+		// 1. 向 application 中加入一个属性： applicationKey -- applicationValue
+		
+		
+		return "success";
+	}
+
+}

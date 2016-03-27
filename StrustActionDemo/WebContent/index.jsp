@@ -9,7 +9,11 @@
 </head>
 <body>
 
-	<a href="TestActionContext.action?name=hohoTT">TestActionContextAction</a>
+	<a href="TestActionContext.action?name=hohoTT">Test ActionContext</a>
+	
+	<br><br><br>
+	
+	<a href="TestAwareAction.action?name=hohoTT">Test TestAwareAction</a>
 	
 	<%
 		if(application.getAttribute("date") == null)

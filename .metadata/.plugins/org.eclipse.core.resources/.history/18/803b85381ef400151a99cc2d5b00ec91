@@ -1,0 +1,17 @@
+package com.wt.action;
+
+public class TestAwareAction {
+	
+	
+	public String execute(){
+		
+		// 1. 向 application 中加入一个属性： applicationKey2 -- applicationValue2
+		
+		
+		// 2. 从 application 中读取一个属性 date，并打印
+		
+		
+		return "success";
+	}
+
+}
