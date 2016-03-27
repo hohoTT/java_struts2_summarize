@@ -30,9 +30,7 @@ public class TestActionContextAction {
 		System.out.println(sessionMap.getClass());
 		
 		if(sessionMap instanceof SessionMap){
-			SessionMap sm = (SessionMap) sessionMap;
-			sm.invalidate();
-			System.out.println("session ʧЧ");
+			
 		}
 		
 		// 3. request

@@ -153,3 +153,8 @@
 127.0.0.1 - - [27/Mar/2016:21:23:22 +0800] "GET /StrustActionDemo/TestAwareAction.action?name=hohoTT HTTP/1.1" 200 331
 127.0.0.1 - - [27/Mar/2016:21:23:34 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 440
 127.0.0.1 - - [27/Mar/2016:21:23:35 +0800] "GET /StrustActionDemo/TestAwareAction.action?name=hohoTT HTTP/1.1" 200 331
+127.0.0.1 - - [27/Mar/2016:21:33:25 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 440
+127.0.0.1 - - [27/Mar/2016:21:33:27 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 440
+127.0.0.1 - - [27/Mar/2016:21:33:28 +0800] "GET /StrustActionDemo/TestActionContext.action?name=hohoTT HTTP/1.1" 200 459
+127.0.0.1 - - [27/Mar/2016:21:35:28 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 440
+127.0.0.1 - - [27/Mar/2016:21:35:29 +0800] "GET /StrustActionDemo/TestActionContext.action?name=hohoTT HTTP/1.1" 200 447

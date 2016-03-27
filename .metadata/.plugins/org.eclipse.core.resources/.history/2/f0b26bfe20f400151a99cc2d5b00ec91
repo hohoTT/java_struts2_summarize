@@ -40,8 +40,6 @@
 			3>. 选用的建议，若一个 Action 类中有多个方法，且多个方法都需要使用域对象的 Map 或 Parameters，
 			则建议使用 Aware 接口的方式
 			
-			4>. session 对应的 Map 实际上是 SessionMap 类型的，强转后若调用 invalidate() 方法，可以是其session失效
-			
 		② 和 Servlet API 耦合的方式：可以访问更多的  Servlet API 对象，且可以调用原生的方法
 			
 			1>. 使用 ServletActionContext
