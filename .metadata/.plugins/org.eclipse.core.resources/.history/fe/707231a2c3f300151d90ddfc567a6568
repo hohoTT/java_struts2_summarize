@@ -11,7 +11,7 @@
 	ProductId : ${productId}
 	<br><br>
 	
-	以下为修改之后，从request中获取的数值：ProductName:  <%= request.getAttribute("productName") %>
+	ProductName: <p>以下为修改之后，从request中获取的数值：</p> <%= request.getAttribute("productName") %>
 	<br><br>
 	
 	ProductDesc : ${productDesc}

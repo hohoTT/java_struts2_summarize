@@ -1,0 +1,8 @@
+<classpath>
+  <container id="StrustsCollocationDemo!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/Administrator/Desktop/WT/java_struts2_summarize/StrustsCollocationDemo/WebContent/WEB-INF/lib/struts2-core-2.3.15.3.jar">
+      <source-attachment-path>D:/备份/F盘备份/struts2/struts-2.3.15.3-all.zip</source-attachment-path>
+      <attribute name="source_encoding">UTF-8</attribute>
+    </entry>
+  </container>
+</classpath>
