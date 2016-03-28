@@ -15,6 +15,15 @@
 	
 	<a href="TestAwareAction.action?name=hohoTT">Test TestAwareAction</a>
 	
+	<br><br><br>
+	
+	<a href="TestServletActionContext.action?name=hohoTT">Test TestServletActionContext</a>
+	
+	<br><br><br>
+	
+	<a href="TestServletAwareAction.action?name=hohoTT">Test TestServletAwareAction</a>
+	
+	
 	<%
 		if(application.getAttribute("date") == null)
 			application.setAttribute("date", new Date());

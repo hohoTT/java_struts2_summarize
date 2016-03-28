@@ -19,6 +19,17 @@
 			<result name="success">/test-aware.jsp</result>		
 		</action>
 		
+		<action name="TestServletActionContext" 
+				class="com.wt.action.TestServletActionContextAction"
+				method="execute" >
+			<result name="success">/test-servletActionContext.jsp</result>		
+		</action>
+		
+		<action name="TestServletAwareAction" 
+				class="com.wt.action.TestServletAwareAction">
+			<result>/test-servletAwareAction.jsp</result>		
+		</action>
+		
     </package>
 
 </struts>
