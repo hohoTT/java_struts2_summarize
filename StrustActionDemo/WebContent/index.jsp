@@ -21,7 +21,11 @@
 	
 	<br><br><br>
 	
-	<a href="TestServletAwareAction.action?name=hohoTT">Test TestServletAwareAction</a>
+	<a href="TestServletAwareAction.do?name=hohoTT">Test TestServletAwareAction</a>
+	
+	<br><br><br>
+	
+	<a href="login-ui.do?name=hohoTT">LoginUI</a>
 	
 	
 	<%

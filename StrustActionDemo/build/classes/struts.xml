@@ -5,6 +5,9 @@
 
 <struts>
 
+	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
+	<constant name="struts.action.extension" value="action,do,"></constant>
+
     <package name="default"  namespace="/" extends="struts-default">
 		
 		<action name="TestActionContext" 
@@ -30,6 +33,9 @@
 			<result>/test-servletAwareAction.jsp</result>		
 		</action>
 		
+		<action name="login-ui">
+			<result>/login.jsp</result>		
+		</action>
     </package>
 
 </struts>

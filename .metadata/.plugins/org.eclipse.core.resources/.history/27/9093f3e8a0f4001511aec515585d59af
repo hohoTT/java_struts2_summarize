@@ -1,0 +1,57 @@
+1. 搭建 Struts2 的开发环境： 三个步骤
+
+2. action 与 Action 类：
+
+	1>. action 代表一个 Struts2 的请求
+	
+	2>. Action 类：能够处理 Struts2 请求的类
+	
+		以下为 Action 类的特点：
+			① 属性的名字必须遵循与 JavaBeans 属性相同的命名规则
+			属性的类型可以是任意类型，从字符串到非字符串（基本数据库类型）之间的数据转换可以自动发生
+			
+			② 必须有一个不带参的构造器：通过反射创建实例
+			
+			③ 至少有一个供 Struts2 在执行这个 action 时调用的方法
+			
+			④ 同一个 A	ction 类可以包含多个 action 方法
+			
+			⑤ Struts2 会为每一个 HTTP 请求创建一个新的 Action 实例， 即 Action 不是单例，是线程安全的
+			
+3. 在 Action 中访问 WEB 资源：
+
+	1>. 什么是 WEB 资源 
+	
+		HttpServerRequest, HttpSession, ServletContext 等原生的 Servlet API
+		
+	2>. 为什么访问 WEB 资源
+	
+		B\S 应用的 Controller 中必然需要访问 WEB 资源：像域对象中读写属性，读写 Cookie，获取realPath 等 
+	
+	3>. 如何访问
+		
+		① 和 Servlet API 解耦的方式：只能访问到有限的  Servlet API 对象，且只能访问其有限的方法
+			（读取请求参数，读写域对象的属性，使 session 失效等）
+			
+			1>. 使用 ActionContext
+			
+			2>. 实现 XXXAware 接口
+			
+			3>. 选用的建议，若一个 Action 类中有多个方法，且多个方法都需要使用域对象的 Map 或 Parameters，
+			则建议使用 Aware 接口的方式
+			
+			4>. session 对应的 Map 实际上是 SessionMap 类型的，强转后若调用 invalidate() 方法，可以是其session失效
+			
+		② 和 Servlet API 耦合的方式：可以访问更多的  Servlet API 对象，且可以调用原生的方法
+			
+			1>. 使用 ServletActionContext
+			
+			2>. 实现 ServletXXXAware 接口
+			
+3. 关于 Struts2 请求的扩展名问题
+
+	1>. org.apache.struts2 包下的 default.properties 中配置了 Struts2 应用的一些常量
+	
+	2>. struts.action.extension 定义了当前 Struts2 应用可以接受的请求的扩展名
+	
+	3>. 可以 在struts.xml 文件中以常量配置的方式修改

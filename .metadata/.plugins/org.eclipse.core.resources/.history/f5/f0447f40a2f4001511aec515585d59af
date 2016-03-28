@@ -1,0 +1,12 @@
+package com.wt.action;
+
+public class UserAction {
+	
+	public String execute(){
+		
+		// 把用户信息存入 Session 域中
+		
+		return "success";
+	}
+
+}
