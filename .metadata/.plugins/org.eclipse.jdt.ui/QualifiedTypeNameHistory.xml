@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.wt.hello.Product"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
@@ -9,8 +7,16 @@
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ParameterAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletRequest"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletRequestAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.util.ServletContextAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletResponseAware"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 </qualifiedTypeNameHistroy>
