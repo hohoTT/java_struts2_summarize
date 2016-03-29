@@ -36,6 +36,18 @@
 		<action name="login-ui">
 			<result>/login.jsp</result>		
 		</action>
+		
+		<action name="user-login" 
+				class="com.wt.action.UserAction">
+			<result name="login-success">/login-success.jsp</result>		
+		</action>
+		
+		<action name="logout" 
+				class="com.wt.action.UserAction"
+				method="logout">
+			<result name="logout-success">/login.jsp</result>		
+		</action>
+		
     </package>
 
 </struts>

@@ -1,0 +1,42 @@
+package com.wt.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+public class UserAction implements SessionAware{
+	
+	private String username;
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String execute(){
+		
+		// 把用户信息存入 Session 域中
+		// 1. 获取 session，通过实现 SessionAware 接口
+		
+		// 2. 获取登录信息: 通过在Action中添加setter 方法
+		
+		// 3. 把用户信息存入 Session 域中
+		
+		
+		
+		// 在线人数 +1
+		
+		return "login-success";
+	}
+	
+	/**
+	 * 
+	 */
+	private Map<String, Object> session;
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
