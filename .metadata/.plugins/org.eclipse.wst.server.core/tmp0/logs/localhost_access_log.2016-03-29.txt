@@ -24,3 +24,14 @@
 0:0:0:0:0:0:0:1 - - [29/Mar/2016:20:10:49 +0800] "GET /StrustActionDemo/user-login.do HTTP/1.1" 200 408
 0:0:0:0:0:0:0:1 - - [29/Mar/2016:20:10:50 +0800] "GET /StrustActionDemo/user-login.do HTTP/1.1" 200 408
 0:0:0:0:0:0:0:1 - - [29/Mar/2016:20:10:51 +0800] "GET /StrustActionDemo/user-login.do HTTP/1.1" 200 408
+127.0.0.1 - - [29/Mar/2016:20:22:10 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 804
+127.0.0.1 - - [29/Mar/2016:20:22:18 +0800] "GET /StrustActionDemo/testActionSupport.do HTTP/1.1" 404 1207
+127.0.0.1 - - [29/Mar/2016:20:22:48 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 804
+127.0.0.1 - - [29/Mar/2016:20:22:50 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 804
+127.0.0.1 - - [29/Mar/2016:20:22:51 +0800] "GET /StrustActionDemo/testActionSupport.do HTTP/1.1" 404 1207
+127.0.0.1 - - [29/Mar/2016:20:22:53 +0800] "GET /StrustActionDemo/login-ui.do?name=hohoTT HTTP/1.1" 200 420
+127.0.0.1 - - [29/Mar/2016:20:22:55 +0800] "POST /StrustActionDemo/user-login.do HTTP/1.1" 200 411
+127.0.0.1 - - [29/Mar/2016:20:22:59 +0800] "POST /StrustActionDemo/user-login.do HTTP/1.1" 200 412
+127.0.0.1 - - [29/Mar/2016:20:25:29 +0800] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [29/Mar/2016:20:25:30 +0800] "GET /StrustActionDemo/ HTTP/1.1" 200 804
+127.0.0.1 - - [29/Mar/2016:20:25:34 +0800] "GET /StrustActionDemo/testActionSupport.do HTTP/1.1" 200 302

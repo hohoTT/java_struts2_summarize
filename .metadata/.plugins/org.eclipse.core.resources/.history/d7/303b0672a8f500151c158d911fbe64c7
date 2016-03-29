@@ -48,10 +48,6 @@
 			<result name="logout-success">/login.jsp</result>		
 		</action>
 		
-		<action name="testActionSupport">
-			<result>/testActionSupport.jsp</result>		
-		</action>
-		
     </package>
 
 </struts>

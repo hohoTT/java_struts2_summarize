@@ -6,10 +6,8 @@
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ParameterAware"/>
-<fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
@@ -19,4 +17,7 @@
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletResponseAware"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
+<fullyQualifiedTypeName name="java.nio.channels.SeekableByteChannel"/>
+<fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
 </qualifiedTypeNameHistroy>

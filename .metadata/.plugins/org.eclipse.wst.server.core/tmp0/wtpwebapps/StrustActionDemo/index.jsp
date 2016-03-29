@@ -27,6 +27,10 @@
 	
 	<a href="login-ui.do?name=hohoTT">LoginUI</a>
 	
+	<br><br><br>
+	
+	<a href="testActionSupport.do">Test Action Support</a>
+	
 	
 	<%
 		if(application.getAttribute("date") == null)
