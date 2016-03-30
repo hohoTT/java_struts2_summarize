@@ -1,0 +1,11 @@
+1. 关于值栈：
+
+	1>. 在第一个项目 StrustsCollocationDemo 中，${ productName } 读取 productName 值时，实际上
+		该属性并不在 request 等域对象中，而是从值栈中获取的
+	
+	2>. 值栈 （valueStack）
+		① 可以从 ActionContext 中获取值栈对象
+		② 值栈分为两个逻辑部分
+			I. Map 栈：实际上是
+			
+	3>.4>

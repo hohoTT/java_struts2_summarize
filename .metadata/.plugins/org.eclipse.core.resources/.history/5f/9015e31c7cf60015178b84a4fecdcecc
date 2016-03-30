@@ -1,0 +1,22 @@
+1. 关于值栈：
+
+	1>. 在第一个项目 StrustsCollocationDemo 中，${ productName } 读取 productName 值时，实际上
+		该属性并不在 request 等域对象中，而是从值栈中获取的
+	
+	2>. 值栈 （valueStack）
+		① 可以从 ActionContext 中获取值栈对象
+		② 值栈分为两个逻辑部分
+			I. Map 栈：实际上是 OgnlContext 类型，是一个 Map，也是对 ActionContext 的一个引用，里面保存这各种 Map：
+				requestMap、sessionMap、applicationMap、parameterMap、attributeMap
+			II. 对象栈：实际上是CompoundRoot 类型，是一个使用  ArrayList 定义的栈，里面保存各种和当前实例相关的对象，
+				是一个数据结构意义的栈
+			
+2. Struts2 利用 s:property 标签和 OGNL 表达式来读取值栈中的属性值
+
+	1>. 值栈中的属性值：
+
+		① 对于对象栈：读取的是对象栈中的某一个对象的属性值
+		
+		② Map 栈： request、session、application 的一个属性值或一个请求参数的值
+	
+	2>.
