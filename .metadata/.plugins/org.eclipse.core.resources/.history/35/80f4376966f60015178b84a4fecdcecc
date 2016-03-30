@@ -66,13 +66,6 @@
 		<result>/testActionSupport.jsp</result>		
 	</action>
 	
-	以上的配置信息等同于下方的
 	
-	<action name="testActionSupport" class="com.opensymphony.xwork2.ActionSupport"
-			method="execute">
-		<result>/testActionSupport.jsp</result>		
-	</action>
-	
-	2>. 在手工完成字段验证，显示错误消息，国际化等情况下，推荐继承 ActionSupport。
 	
 	

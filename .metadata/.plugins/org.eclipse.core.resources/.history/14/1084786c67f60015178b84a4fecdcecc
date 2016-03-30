@@ -73,6 +73,6 @@
 		<result>/testActionSupport.jsp</result>		
 	</action>
 	
-	2>. 在手工完成字段验证，显示错误消息，国际化等情况下，推荐继承 ActionSupport。
+	2>. 在手工完成字段验证
 	
 	
