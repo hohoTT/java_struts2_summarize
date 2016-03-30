@@ -39,6 +39,21 @@
 
 ### 1. 搭建 Struts2 的开发环境： 三个步骤
 
+	1>. 在lib文件夹中添加与Struts2有关的jar包
+	
+	2>. 在src文件夹中添加struts.xml的配置文件
+	
+	3>. 在web.xml文件中 配置 Struts2 的 Filter，以下为相关的配置：
+		  <filter>
+		      <filter-name>struts2</filter-name>
+		      <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		  </filter>
+		
+		  <filter-mapping>
+		      <filter-name>struts2</filter-name>
+		      <url-pattern>/*</url-pattern>
+		  </filter-mapping>
+	  
 ### 2. action 与 Action 类：
 
 	1>. action 代表一个 Struts2 的请求
