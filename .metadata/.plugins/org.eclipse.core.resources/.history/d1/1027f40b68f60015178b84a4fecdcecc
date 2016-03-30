@@ -48,7 +48,7 @@
 			
 			2>. 实现 ServletXXXAware 接口
 			
-4. 关于 Struts2 请求的扩展名问题
+3. 关于 Struts2 请求的扩展名问题
 
 	1>. org.apache.struts2 包下的 default.properties 中配置了 Struts2 应用的一些常量
 	
@@ -57,7 +57,7 @@
 	3>. 可以 在struts.xml 文件中以常量配置的方式修改 default.properties 所配置的常量
 		 例 ： <constant name="struts.action.extension" value="action,do,"></constant>
 		 
-5. ActionSupport
+4. ActionSupport
 
 	1>. ActionSupport 是默认的 Action 类，若某个 action 节点没有配置 class 属性，则 ActionSupport 即为
 	待执行的 Action 类，而 execute 方法即为要默认执行的 action 方法
