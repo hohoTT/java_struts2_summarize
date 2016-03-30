@@ -10,6 +10,11 @@
 
     <package name="default"  namespace="/" extends="struts-default">
     
+    	<action name="product-save" class="com.wt.valueStack.Product"
+    			method="save">
+    		<result>/details.jsp</result>
+    	</action>
+    
     </package>
 
 </struts>
