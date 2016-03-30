@@ -1,0 +1,27 @@
+package com.wt.strust.action;
+
+public class UserAction {
+	
+	public String save(){
+		
+		
+		
+		return "success";
+	}
+	
+	public String update(){
+			
+			return "success";
+		}
+	
+	public String delete(){
+		
+		return "success";
+	}
+	
+	public String query(){
+		
+		return "success";
+	}
+
+}

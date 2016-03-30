@@ -10,7 +10,14 @@
 
     <package name="default"  namespace="/" extends="struts-default">
     
+    	<!-- 使用通配符进行映射 -->
+    
+    	<action name="UserAction-*" class="com.wt.strust.action.UserAction"
+    			method="{1}">
+    		<result name="{1}-success">/success.jsp</result>
+    	</action>
     	
+    	<!--  -->
     
     </package>
 
