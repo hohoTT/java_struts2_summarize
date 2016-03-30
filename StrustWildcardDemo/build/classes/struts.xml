@@ -7,6 +7,9 @@
 
 	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
 	<constant name="struts.action.extension" value="action,do,"></constant>
+	
+	<!-- 打开允许动态方法调用的开关,默认是false -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
 
     <package name="default"  namespace="/" extends="struts-default">
     
@@ -17,7 +20,12 @@
     		<result name="{1}-success">/success.jsp</result>
     	</action>
     	
-    	<!--  -->
+    	<!-- 测试动态方法调用 -->
+    	<action name="testDynamicMethodInvocationAction"
+    	 		class="com.wt.strust.action.TestDynamicMethodInvocationAction"
+    	 		method="save">
+    		<result>/success.jsp</result>
+    	</action>
     
     </package>
 

@@ -1,0 +1,15 @@
+package com.wt.strust.action;
+
+public class TestDynamicMethodInvocationAction {
+	
+	public String save(){
+		
+		return "success";
+	}
+	
+	public String update(){
+		
+		return "success";
+	}
+
+}

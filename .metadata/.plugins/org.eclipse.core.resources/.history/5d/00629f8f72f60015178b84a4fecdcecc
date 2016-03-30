@@ -27,4 +27,4 @@
 		以下例子为：加入 !update ，调用 testDynamicMethodInvocationAction 类中的 update 方法
 		http://localhost:8080/StrustWildcardDemo/testDynamicMethodInvocationAction!update.do
 	
-	3>. 注：默认情况下 Struts 的动态方法处于禁用的状态，一般不推荐使用
+	注：默认情况下 Struts 的动态方法处于禁用的状态，一般不推荐使用

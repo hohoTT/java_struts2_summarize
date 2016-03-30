@@ -26,6 +26,10 @@
 	<a href="UserAction-query">User Query </a>
 	
 	<br><br><br>
+	
+	<a href="testDynamicMethodInvocationAction.do">Test DynamicMethodInvocationAction</a>
+	
+	<br><br><br>
 
 </body>
 </html>

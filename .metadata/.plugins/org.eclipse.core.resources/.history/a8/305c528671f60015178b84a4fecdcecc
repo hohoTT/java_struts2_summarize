@@ -21,11 +21,6 @@
     	</action>
     	
     	<!-- 测试动态方法调用 -->
-    	<action name="testDynamicMethodInvocationAction"
-    	 		class="com.wt.strust.action.TestDynamicMethodInvocationAction"
-    	 		method="save">
-    		<result>/success.jsp</result>
-    	</action>
     
     </package>
 
