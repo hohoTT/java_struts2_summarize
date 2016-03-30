@@ -147,6 +147,19 @@
 	6>. * 可以匹配零个或多个字符，但不包括 / 字符，如果想把 / 字符包括在内，需要使用 **，如果需要
 	对某个字符进行转义，需要使用 \
 	
+### 7. 动态方法调用
+
+	1>. 以下为动态方法调用的配置
+		<!-- 打开允许动态方法调用的开关,默认是false -->
+		<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	
+	2>. 如何使用
+		
+		以下例子为：加入 !update ，调用 testDynamicMethodInvocationAction 类中的 update 方法
+		http://localhost:8080/StrustWildcardDemo/testDynamicMethodInvocationAction!update.do
+	
+	3>. 注：默认情况下 Struts 的动态方法处于禁用的状态，一般不推荐使用
+	
 	
 
 
