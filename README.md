@@ -203,7 +203,35 @@
 	
 ### 10. 使用  EL 表达式进行属性的访问一定可以用  OGNL 表达式进行访问，但是使用 OGNL 表达式进行属性的访问则不一定可以使用  EL 表达式来进行访问
 		
+### 11. 异常处理 exception-mapping 元素：
+
+	1>. 以下为 struts.xml 中exception-mapping 元素配置的举例：
+	
+		<action name="product-save" class="com.wt.valueStack.Product"
+				method="save">
+			
+			<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
+				
+			<result name="input">/input.jsp</result>
+			
+			<result>/details.jsp</result>
+		</action>
+	
+	2>. exception-mapping 元素： 配置当前 action 的声明式异常处理
 		
+		① exception： 指定需要捕获的异常类型
+		② result： 指定一个响应结果，该结果将在捕获到指定异常时被执行
+		
+	
+	3> 配置全局的异常处理
+	
+		<global-results>
+    		<result name="input">/input.jsp</result>
+		</global-results>
+		
+		<global-exception-mapping>
+			<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
+		</global-exception-mapping>		
 		
 		
 		
