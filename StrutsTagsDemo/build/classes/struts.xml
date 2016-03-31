@@ -10,7 +10,10 @@
 	 
     <package name="default"  namespace="/" extends="struts-default">
 	
-		
+		<action name="testTag" class="com.wt.valueStack.Product"
+    			method="testTag">
+    		<result>/common-tag.jsp</result>
+    	</action>
     
     </package>
 

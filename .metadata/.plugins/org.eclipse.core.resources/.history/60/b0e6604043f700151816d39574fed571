@@ -1,0 +1,4 @@
+1. Struts2 自动把 Action 对象放到值栈中
+
+	1>. 放入的时间点为： Struts2 终将调用 Action 类的
+	2>.

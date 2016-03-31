@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
+	<constant name="struts.action.extension" value="action,do,"></constant>
+	 
+    <package name="default"  namespace="/" extends="struts-default">
+	
+		<action name="product-save" class="com.wt.valueStack.Product"
+    			method="save">
+    		
+			<!-- 配置exception-mapping 元素，声明式异常处理 -->
+    		<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
+    			
+    		<result name="input">/input.jsp</result>
+    		
+    		<result>/details.jsp</result>
+    	</action>
+    
+    </package>
+
+</struts>
