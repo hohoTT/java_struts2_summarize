@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.wt.hello.Product"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
@@ -20,4 +19,8 @@
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
 <fullyQualifiedTypeName name="java.nio.channels.SeekableByteChannel"/>
 <fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.util.ValueStack"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="com.wt.valueStack.Test"/>
 </qualifiedTypeNameHistroy>
