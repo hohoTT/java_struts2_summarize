@@ -7,6 +7,9 @@
 
 	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
 	<constant name="struts.action.extension" value="action,do,"></constant>
+	
+	<!-- 打开静态方法调用的限制 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
 
     <package name="default"  namespace="/" extends="struts-default">
     

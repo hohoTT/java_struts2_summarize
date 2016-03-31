@@ -1,9 +1,14 @@
 package com.wt.valueStack;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.util.ValueStack;
 
-public class Product {
+public class Product implements RequestAware, SessionAware{
 
 	private Integer productId;
 	private String productName;
@@ -60,7 +65,28 @@ public class Product {
 		// 3. 把 Test 对象压入到值栈的栈顶
 		valueStack.push(test);
 		
+		sessionMap.put("product", this);
+		requsetMap.put("test", test);
+		
 		return "success";
+	}
+	
+	private Map<String, Object> sessionMap;
+	
+	@Override
+	public void setSession(Map<String, Object> sessionMap) {
+		
+		this.sessionMap = sessionMap;
+		
+	}
+	
+	private Map<String, Object> requsetMap;
+	
+	@Override
+	public void setRequest(Map<String, Object> requsetMap) {
+		
+		this.requsetMap = requsetMap;
+		
 	}
 	
 }

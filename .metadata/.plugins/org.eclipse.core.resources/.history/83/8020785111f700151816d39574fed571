@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+ 
+<%@ taglib prefix="s" uri="/struts-tags" %>   
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	以下为修改之后，从request中获取的数值：ProductName:  <%= request.getAttribute("productName") %>
+	<br><br>
+	
+	ProductDesc : ${productDesc}
+	<br><br>
+	
+	获取从表单提交的 ProductDesc : <s:property value="[1].productDesc"/>
+	<br><br>
+	
+	ProductPrice : ${productPrice}
+	<br><br>
+	
+	requset: <%= request %>
+	
+	<s:debug></s:debug>
+	
+	结合 s:property 标签 显示 ProductPrice : <s:property value="[0].ProductPrice"/><br/><br/>
+	
+	使用EL获取 ProductName1:  ${ sessionScope.product.productName }<br/><br/>
+	
+	使用EL获取 ProductName2:  ${ requestScope.test.productName }<br/><br/>
+	
+	使用OGNL获取 ProductName1:  <s:property value="#session.product.productName"/> <br/><br/>
+	
+	使用OGNL获取 ProductName2:  <s:property value="#request.test.productName"/> <br/><br/>
+	
+	<!-- 使用 OGNL 调用 public 类的 public 类型的静态字段和静态方法 -->
+	<s:property value="@java.lang.Math@PI"/> <br/><br/>
+
+	<s:property value="@java.lang.Math@cos(0)"/> <br/><br/>
+	
+	<!-- 调用对象栈的方法为一个属性赋值 -->
+	<s:property value="setProductName('hohoTT')"/> <br/><br/>
+	<s:property value="ProductPrice"/><br/><br/>
+	
+</body>
+</html>
