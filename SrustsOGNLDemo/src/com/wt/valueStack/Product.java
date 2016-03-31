@@ -68,6 +68,9 @@ public class Product implements RequestAware, SessionAware{
 		sessionMap.put("product", this);
 		requsetMap.put("test", test);
 		
+		// 用于测试异常信息的处理
+		int i = 10 / 0;
+		
 		return "success";
 	}
 	

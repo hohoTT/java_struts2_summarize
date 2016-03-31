@@ -11,10 +11,27 @@
 	<!-- 打开静态方法调用的限制 -->
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
 
+	<!-- 配置全局的异常处理 -->
+	<!-- 	
+		<global-results>
+    		<result name="input">/input.jsp</result>
+		</global-results>
+		
+		<global-exception-mapping>
+			<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
+		</global-exception-mapping>
+	 -->
+	 
     <package name="default"  namespace="/" extends="struts-default">
     
     	<action name="product-save" class="com.wt.valueStack.Product"
     			method="save">
+    		
+			<!-- 配置exception-mapping 元素，声明式异常处理 -->
+    		<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
+    			
+    		<result name="input">/input.jsp</result>
+    		
     		<result>/details.jsp</result>
     	</action>
     
