@@ -13,6 +13,9 @@
 	
 	<s:debug></s:debug> <br/><br/>
 	
+	<!-- 以下为 s: property 标签的使用介绍 -->
+	以下为 s: property 标签的使用介绍 <hr/>
+	
 	s: property: 打印值栈中的属性值的：对于对象栈，打印值栈中对于的属性值 <br/><br/>
 	<s:property value="productName"/> <br/><br/>
 	
@@ -21,6 +24,45 @@
 	
 	<s:property value="#parameters.name"/> <br/><br/>
 	
+	
+	
+	<!-- 以下为 s:url 标签的使用介绍 -->
+	以下为 s:url 标签的使用介绍 <hr/>
+	
+	s:url: 创建一个 URL 字符串的 <br/><br/>
+	<s:url value="/getProduct" var="url1">
+		<!-- 指定包含参数的url值，数字不会被当做是参数处理 -->
+		<s:param name="productId" value="666666"></s:param>
+	</s:url> 
+	${ url1 } <br/><br/>
+	
+	<s:url value="/getProduct" var="url2">
+		<!-- 对于 value 值会自动的进行 OGNL 解析 -->
+		<s:param name="productId" value="productId"></s:param>
+	</s:url> 
+	${ url2 } <br/><br/>
+	
+	<s:url value="/getProduct" var="url3">
+		<!-- 对于 value 值会自动的进行 OGNL 解析, 若不希望进行 OGNL 解析，则使用单引号引起来 -->
+		<s:param name="productId" value="'abcd'"></s:param>
+	</s:url> 
+	${ url3 } <br/><br/>
+	
+	<!-- 构建一个请求 action 的地址 -->
+	<s:url action="testAction" namespace="/hohoTT" method="testTag" var="url4"></s:url>
+	${ url4 } <br/><br/>
+	
+	<!-- 可以获取请求 url 中的参数值，includeParams="get"，此时获取的为 get 请求的参数-->
+	<s:url value="/testUrl" var="url5" includeParams="get"></s:url>
+	${ url5 } <br/><br/>
+	
+	<!-- 可以获取请求 url 中的参数值，includeParams="all"，此时获取的为 post 请求的参数-->
+	<s:url value="/testUrl" var="url6" includeParams="all"></s:url>
+	${ url6 } <br/><br/>
+	
+	<br/><br/>
+	
+	<br/><br/>
 
 </body>
 </html>

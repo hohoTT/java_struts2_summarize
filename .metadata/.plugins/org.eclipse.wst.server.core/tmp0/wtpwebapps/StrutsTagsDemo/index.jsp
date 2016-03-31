@@ -18,6 +18,10 @@
 		session.setAttribute("date", new Date());
 	%>
 	
+	<form action="testTag" method="post">
+		<input type="text" name="username"/>
+		<input type="submit" value="Submit"/>
+	</form>
 
 </body>
 </html>
