@@ -4,8 +4,6 @@
 <fullyQualifiedTypeName name="com.wt.hello.Product"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ParameterAware"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
@@ -15,7 +13,6 @@
 <fullyQualifiedTypeName name="org.apache.struts2.util.ServletContextAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletResponseAware"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
 <fullyQualifiedTypeName name="java.nio.channels.SeekableByteChannel"/>
 <fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
@@ -23,4 +20,7 @@
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.util.ValueStack"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 <fullyQualifiedTypeName name="com.wt.valueStack.Test"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>
