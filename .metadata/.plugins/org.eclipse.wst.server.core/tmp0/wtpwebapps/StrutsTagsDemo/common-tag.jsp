@@ -31,8 +31,8 @@
 	
 	s:url: 创建一个 URL 字符串的 <br/><br/>
 	<s:url value="/getProduct" var="url1">
-		<!-- 指定包含参数的url值，数字不会被当做是参数处理 -->
-		<s:param name="productId" value="666666"></s:param>
+		<!-- 指定包含参数的url值，数字不会被当做是参数处理, Struts2 直接把数字作为属性值 -->
+		<s:param name="productId" value="6666"></s:param>
 	</s:url> 
 	${ url1 } <br/><br/>
 	
