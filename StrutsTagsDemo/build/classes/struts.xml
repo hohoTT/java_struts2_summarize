@@ -14,6 +14,10 @@
     			method="testTag">
     		<result>/common-tag.jsp</result>
     	</action>
+    	
+    	<action name="save" class="com.wt.action.UserAction" method="save">
+    		<result name="input">/form-tag.jsp</result>
+    	</action>
     
     </package>
 

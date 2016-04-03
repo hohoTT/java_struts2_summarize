@@ -14,6 +14,9 @@
 	<a href="testTag?name=hohoTT">Test Tag</a>
 	<br><br><br>
 	
+	<a href="form-tag.jsp">form-tag page</a>
+	<br><br><br>
+	
 	<%
 		session.setAttribute("date", new Date());
 	%>
