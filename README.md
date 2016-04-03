@@ -233,7 +233,13 @@
 		<global-exception-mapping>
 			<exception-mapping result="input" exception="java.lang.ArithmeticException"></exception-mapping>
 		</global-exception-mapping>		
-		
+	
+### 12.  Struts2 自动把 Action 对象放到值栈中
+
+	放入的时间点为： Struts2 终将调用 Action 类的 Action 方法，但在调用该方法之前：
+	
+	① 先创建一个 StrutsActionProxy对象
+	② 在创建 StrutsActionProxy之后，对其进行初始化时，把 Action 对象放入值栈中
 		
 		
 		
