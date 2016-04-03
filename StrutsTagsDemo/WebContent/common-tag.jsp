@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page import="com.wt.valueStack.Person"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -132,9 +134,53 @@
 		#request.person.age <= 21
 	</s:else>
 	<br/><br/>
-	<br/><br/>
+	
+	
+	
+	<!-- 以下为 s:iterator 标签的使用介绍 -->
+	以下为 s:iterator 标签的使用介绍 <hr/>
+	
+	s:iterator: 遍历集合的，把这个可遍历对象里的每一个对象依次压入和弹出
 	<br/><br/>
 	
+	<!-- 构架一个集合 -->
+	<%
+		List<Person> persons = new ArrayList<Person>();
+		
+		persons.add(new Person("AA", 10));
+		persons.add(new Person("BB", 20));
+		persons.add(new Person("CC", 30));
+		persons.add(new Person("DD", 40));
+		persons.add(new Person("EE", 50));
+		
+		request.setAttribute("persons", persons);
+	%>
+	
+	<!-- 从request中获取之前存入的集合属性 -->
+	从request中获取之前存入的集合属性   <br/>
+	<s:iterator value="#request.persons">
+		name: ${ name }  --- age: ${ age }<br/>
+	</s:iterator>
+	<br/><br/>
+	
+	从request中获取之前存入的集合属性, 显示status中的属性值(例：index、count)   <br/>
+	<s:iterator value="#request.persons" status="status">
+		index: ${ status.index } ---- count: ${ status.count } : name: ${ name }  --- age: ${ age }<br/>
+	</s:iterator>
+	<br/><br/>
+	
+	<!-- 从值栈中获取之前存入的集合属性 -->
+	从值栈中获取之前存入的集合属性 <br/>
+	<s:iterator value="persons">
+		name: ${ name }  --- age: ${ age }<br/>
+	</s:iterator>
+	<br/><br/>
+	
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
 
 </body>
 </html>

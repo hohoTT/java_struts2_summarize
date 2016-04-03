@@ -1,5 +1,7 @@
 package com.wt.valueStack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
@@ -42,6 +44,8 @@ public class Product implements RequestAware, SessionAware{
 	public void setProductPrice(double productPrice) {
 		this.productPrice = productPrice;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName="
@@ -49,12 +53,24 @@ public class Product implements RequestAware, SessionAware{
 				+ ", productPrice=" + productPrice + "]";
 	}
 	
+	private List<Person> persons = new ArrayList<Person>();
+	
+	public List<Person> getPersons() {
+		return persons;
+	}
+	
 	public String testTag(){
 		
 		this.productId = 1001;
 		this.productName = "testName";
 		this.productDesc = "testDesc";
-		this.productPrice = 66.66;
+		this.productPrice = 866.66;
+		
+		persons.add(new Person("AAA", 11));
+		persons.add(new Person("BBB", 22));
+		persons.add(new Person("CCC", 33));
+		persons.add(new Person("DDD", 44));
+		persons.add(new Person("EEE", 55));
 		
 		return "success";
 	}
