@@ -40,8 +40,7 @@
 		<!-- 对于 value 值会自动的进行 OGNL 解析 -->
 		<s:param name="productId" value="productId"></s:param>
 		
-		<!-- OGNL 解析 date -->
-		<s:param name="date" value="#session.date"></s:param>
+		<!--  -->
 	</s:url> 
 	${ url2 } <br/><br/>
 	

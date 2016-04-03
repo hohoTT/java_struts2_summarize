@@ -4,3 +4,4 @@
 127.0.0.1 - - [03/Apr/2016:15:09:41 +0800] "GET /StrutsTagsDemo/ HTTP/1.1" 200 503
 127.0.0.1 - - [03/Apr/2016:15:09:43 +0800] "GET /StrutsTagsDemo/testTag?name=hohoTT HTTP/1.1" 200 335429
 127.0.0.1 - - [03/Apr/2016:15:09:54 +0800] "GET /StrutsTagsDemo/testTag?name=hohoTT HTTP/1.1" 200 335446
+127.0.0.1 - - [03/Apr/2016:15:15:28 +0800] "GET /StrutsTagsDemo/testTag?name=hohoTT HTTP/1.1" 200 335524

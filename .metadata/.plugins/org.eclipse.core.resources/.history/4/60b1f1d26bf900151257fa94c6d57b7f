@@ -41,7 +41,6 @@
 		<s:param name="productId" value="productId"></s:param>
 		
 		<!-- OGNL 解析 date -->
-		<s:param name="date" value="#session.date"></s:param>
 	</s:url> 
 	${ url2 } <br/><br/>
 	
