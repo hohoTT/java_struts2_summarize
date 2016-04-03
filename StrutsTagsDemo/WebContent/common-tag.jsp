@@ -26,6 +26,7 @@
 	
 	
 	
+	
 	<!-- 以下为 s:url 标签的使用介绍 -->
 	以下为 s:url 标签的使用介绍 <hr/>
 	
@@ -63,9 +64,25 @@
 	<s:url value="/testUrl" var="url6" includeParams="all"></s:url>
 	${ url6 } <br/><br/>
 	
-	<br/><br/>
+	
+	
+	
+	<!-- 以下为 s:set 标签的使用介绍 -->
+	以下为 s:set 标签的使用介绍 <hr/>
+	
+	s:set: 向 page、request、session、application 域对象中加入一个属性值
+	
+	<!-- 对 value 属性值自动的进行 OGNL 解析 -->
+	<s:set name="productName" value="productName" scope="request"></s:set>
+	productName: ${ requestScope.productName } <br/><br/>
+	
+	<s:set name="productDesc" value="productDesc" scope="page"></s:set>
+	productDesc: ${ pageScope.productDesc } <br/><br/>
 	
 	<br/><br/>
+	
+	
+	
 
 </body>
 </html>
