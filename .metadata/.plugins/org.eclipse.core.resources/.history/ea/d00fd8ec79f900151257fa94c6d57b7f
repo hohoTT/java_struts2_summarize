@@ -187,16 +187,9 @@
 	
 		request.setAttribute("personComparator", personComparator);
 	%>
-	
-	<!-- 
-		进行排序，将排序完成的对象放入 persons2 新的对象中
-		source 为之前加入request属性的 persons	
-	 -->
 	<s:sort comparator="#request.personComparator" source="persons" var="persons2"></s:sort>
 	
-	<s:iterator value="#attr.persons2">
-		name: ${ name }  --- age: ${ age }<br/>
-	</s:iterator>
+	
 	<br/><br/>
 	<br/><br/>
 	<br/><br/>

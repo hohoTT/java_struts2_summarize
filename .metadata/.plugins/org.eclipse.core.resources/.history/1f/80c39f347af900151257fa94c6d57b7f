@@ -65,11 +65,11 @@ public class Product implements RequestAware, SessionAware{
 		this.productName = "testName";
 		this.productDesc = "testDesc";
 		this.productPrice = 866.66;
-
-		persons.add(new Person("CCC", 33));
+		
 		persons.add(new Person("AAA", 11));
-		persons.add(new Person("DDD", 44));
 		persons.add(new Person("BBB", 22));
+		persons.add(new Person("CCC", 33));
+		persons.add(new Person("DDD", 44));
 		persons.add(new Person("EEE", 55));
 		
 		return "success";

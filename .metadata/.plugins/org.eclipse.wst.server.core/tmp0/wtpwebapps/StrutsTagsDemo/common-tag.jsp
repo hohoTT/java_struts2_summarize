@@ -1,3 +1,4 @@
+<%@page import="com.wt.valueStack.PersonComparator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.wt.valueStack.Person"%>
@@ -176,7 +177,26 @@
 	</s:iterator>
 	<br/><br/>
 	
-	<br/><br/>
+	
+	<!-- 以下为 s:sort 标签的使用介绍 -->
+	以下为 s:sort 标签的使用介绍 <hr/>
+	
+	s:sort: 可以对集合总的元素进行排序 <br/><br/>
+	<%
+		PersonComparator personComparator = new PersonComparator();
+	
+		request.setAttribute("personComparator", personComparator);
+	%>
+	
+	<!-- 
+		进行排序，将排序完成的对象放入 persons2 新的对象中
+		source 为之前加入request属性的 persons	
+	 -->
+	<s:sort comparator="#request.personComparator" source="persons" var="persons2"></s:sort>
+	
+	<s:iterator value="#attr.persons2">
+		name: ${ name }  --- age: ${ age }<br/>
+	</s:iterator>
 	<br/><br/>
 	<br/><br/>
 	<br/><br/>
