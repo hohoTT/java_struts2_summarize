@@ -209,15 +209,7 @@
 
 	<!-- format 为对 name 指定的 date 进行排版，formar 为排版的格式指定，var 为排版完成的新的 date 对象 -->
 	<s:date name="#session.date" format="yyyy-MM-dd hh:mm:ss" var="date2"/>
-	date2 : ${ date2 }
 	<br/><br/>
-	
-	
-	<s:iterator value="persons"> 
-		<!-- a标签中不支持 OGNL解析，需要进行强制的 OGNL 解析，写法如下 -->
-		<!-- 可以为使用  %{} 把属性包装起来，使其进行强制的 OGNL 解析 -->
-		<s:a href="getPerson.action?name=%{name}">${ name }</s:a>
-	</s:iterator>
 	<br/><br/>
 
 </body>

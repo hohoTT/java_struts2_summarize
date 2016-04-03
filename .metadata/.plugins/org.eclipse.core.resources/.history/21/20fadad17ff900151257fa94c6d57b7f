@@ -215,7 +215,6 @@
 	
 	<s:iterator value="persons"> 
 		<!-- a标签中不支持 OGNL解析，需要进行强制的 OGNL 解析，写法如下 -->
-		<!-- 可以为使用  %{} 把属性包装起来，使其进行强制的 OGNL 解析 -->
 		<s:a href="getPerson.action?name=%{name}">${ name }</s:a>
 	</s:iterator>
 	<br/><br/>
