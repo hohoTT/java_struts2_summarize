@@ -107,7 +107,30 @@
 	<br/><br/>
 	
 	
+	
+	
+	<!-- 以下为 s:if, s:else, s:elseif 标签的使用介绍 -->
+	以下为 s:if, s:else, s:elseif 标签的使用介绍 <hr/>
+	
+	<!-- 可以直接使用值栈中的属性，测试值栈中的 productPrice -->
+	<s:if test="productPrice > 1000">
+		productPrice > 1000
+	</s:if>
+	<s:elseif test="productPrice > 800">
+		productPrice > 800
+	</s:elseif>
+	<s:else>
+		else
+	</s:else>
 	<br/><br/>
+	
+	<!-- 测试值栈中的 age -->
+	<s:if test="#request.person.age > 21">
+		#request.person.age > 21
+	</s:if>
+	<s:else>
+		#request.person.age <= 21
+	</s:else>
 	<br/><br/>
 	<br/><br/>
 	<br/><br/>
