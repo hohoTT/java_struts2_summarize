@@ -1,3 +1,4 @@
+<%@page import="com.wt.valueStack.Person"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>  
@@ -82,6 +83,34 @@
 	<br/><br/>
 	
 	
+	
+	<!-- 以下为 s:push 标签的使用介绍 -->
+	以下为 s:push 标签的使用介绍 <hr/>
+	
+	s:push: 把一个对象在标签开始后压入到值栈中，标签结束后，弹出值栈
+	<!-- 临时写一个对象 -->
+	<%
+		Person person = new Person();
+		person.setName("Person_hohoTT");
+		person.setAge(21);
+		
+		request.setAttribute("person", person);
+	%>
+	
+	<!-- 将之前临时创建的对象压入到值栈中 -->
+	<s:push value="#request.person">
+		将之前临时创建的对象压入到值栈中 : ${ name }
+		<br/><br/>
+		<!-- 只有在 push 标签内有效，出了标签之后，该对象会自动弹出值栈 -->
+		hhh: <s:property value="name" />
+	</s:push>
+	<br/><br/>
+	
+	
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
 	
 
 </body>
