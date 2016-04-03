@@ -240,6 +240,14 @@
 	
 	① 先创建一个 StrutsActionProxy对象
 	② 在创建 StrutsActionProxy之后，对其进行初始化时，把 Action 对象放入值栈中
+	
+### 13. Struts2 中部分通用代码的使用详情
+
+	<1>.
+	<1>.
+	<1>.
+	<1>.
+	<1>.
 		
 		
 		
