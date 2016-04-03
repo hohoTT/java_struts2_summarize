@@ -243,11 +243,49 @@
 	
 ### 13. Struts2 中部分通用代码的使用详情
 
-	<1>.
-	<1>.
-	<1>.
-	<1>.
-	<1>.
+	<1>. property 标签
+	
+		① s: property: 打印值栈中的属性值的：对于对象栈，打印值栈中对于的属性值
+		② 对于 Map 栈，打印 request、session、application 某个属性值 或 某个请求参数的值 
+		
+	<2>. url 标签
+		
+		① 创建一个 URL 字符串的
+		② 指定包含参数的url值，数字不会被当做是参数处理, Struts2 直接把数字作为属性值 
+		③ 对于 value 值会自动的进行 OGNL 解析 
+		④ 对于 value 值会自动的进行 OGNL 解析, 若不希望进行 OGNL 解析，则使用单引号引起来 
+		⑤ 可构建一个请求 action 的地址
+		⑥ 可以获取请求 url 中的参数值，includeParams="get"，此时获取的为 get 请求的参数
+		⑦ 可以获取请求 url 中的参数值，includeParams="all"，此时获取的为 post 请求的参数
+		
+	<3>. set 标签
+		
+		① s:set: 向 page、request、session、application 域对象中加入一个属性值
+		② 对 value 属性值自动的进行 OGNL 解析
+		
+	<4>. push 标签
+		
+		① 把一个对象在标签开始后压入到值栈中，标签结束后，弹出值栈
+		② 将之前临时创建的对象压入到值栈中，只有在 push 标签内有效，出了标签之后，该对象会自动弹出值栈
+	
+	<5>. if, else, elseif 标签
+	
+		可以直接使用值栈中的属性
+		
+	<6>. iterator 标签
+		
+		① 遍历集合的，把这个可遍历对象里的每一个对象依次压入和弹出
+		② status中的属性值(例：index、count)
+		
+	<7>. sort 标签
+	
+		① 可以对集合总的元素进行排序
+		② source 为之前加入request中的属性	
+		
+	<8>. date 标签
+	
+		①
+		② 
 		
 		
 		
