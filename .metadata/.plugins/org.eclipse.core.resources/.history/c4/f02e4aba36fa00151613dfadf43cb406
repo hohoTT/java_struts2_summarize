@@ -1,0 +1,16 @@
+package com.wt.action;
+
+import org.apache.struts2.interceptor.RequestAware;
+
+import com.wt.dao.Dao;
+
+public class EmployeeAction implements RequestAware{
+	
+	private Dao dao = new Dao();
+
+	public String list(){
+		
+		return "list";
+	}
+	
+}

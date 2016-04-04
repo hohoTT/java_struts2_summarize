@@ -1,0 +1,18 @@
+package com.wt.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.wt.entity.Employee;
+
+public class Dao {
+	
+	private static Map<Integer, Employee> emps = new HashMap<Integer, Employee>();
+	
+	// ¾²Ì¬´úÂë¿é½øĞĞ
+	static{
+		
+		
+	}
+
+}

@@ -9,7 +9,14 @@
 	<constant name="struts.action.extension" value="action,do,"></constant>
 	 
     <package name="default"  namespace="/" extends="struts-default">
-    
+   	
+   		<!-- 使用通配符的形式进行配置 -->
+   		<action name="emp-*" class="com.wt.action.EmployeeAction"
+   				method="{1}">
+   			<result name="{1}">/emp-{1}.jsp</result>
+   			<!-- 以下的为精确匹配 -->
+   			<result name="delete" type="redirectAction">emp-list</result>
+   		</action>
     
     </package>
 

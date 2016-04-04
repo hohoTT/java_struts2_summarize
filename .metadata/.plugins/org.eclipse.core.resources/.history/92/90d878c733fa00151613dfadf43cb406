@@ -1,0 +1,18 @@
+package com.wt.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.wt.entity.Employee;
+
+public class Dao {
+	
+	private static Map<Integer, Employee> emps = new HashMap<Integer, Employee>();
+	
+	// 静态代码块进行 emps 的初始化
+	static{
+		emps.put(1001, new Employee(1001, "AA", "aa", "aa@hohoTT.com"));
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package com.wt.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+
+import com.wt.dao.Dao;
+
+public class EmployeeAction implements RequestAware{
+	
+	private Dao dao = new Dao();
+	
+	private Map<String, Object> requesetMap;
+	
+	private Integer employeeId;
+	
+	
+
+	public String list(){
+		
+		requesetMap.put("emps", dao.geteEmployees());
+		
+		return "list";
+	}
+	
+
+	@Override
+	public void setRequest(Map<String, Object> request) {
+		
+		this.requesetMap = request;
+		
+	}
+	
+}

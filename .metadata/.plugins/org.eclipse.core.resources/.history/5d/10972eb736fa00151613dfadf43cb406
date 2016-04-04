@@ -1,0 +1,14 @@
+package com.wt.action;
+
+import com.wt.dao.Dao;
+
+public class EmployeeAction {
+	
+	private Dao dao = new Dao();
+
+	public String list(){
+		
+		return "list";
+	}
+	
+}

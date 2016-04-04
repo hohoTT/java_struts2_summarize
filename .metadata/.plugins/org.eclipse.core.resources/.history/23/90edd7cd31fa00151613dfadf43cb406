@@ -1,0 +1,14 @@
+package com.wt.entity;
+
+public class Employee {
+	
+	private Integer employeeId;
+	private String emploteeFirstname;
+	private String emploteeLastname;
+	
+	private String email;
+	
+	
+	
+
+}

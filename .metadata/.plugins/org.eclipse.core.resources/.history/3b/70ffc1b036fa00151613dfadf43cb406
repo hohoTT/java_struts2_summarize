@@ -1,0 +1,10 @@
+package com.wt.action;
+
+public class EmployeeAction {
+
+	public String list(){
+		
+		return "list";
+	}
+	
+}

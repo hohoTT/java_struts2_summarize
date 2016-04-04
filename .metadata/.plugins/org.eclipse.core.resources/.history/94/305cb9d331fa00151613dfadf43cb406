@@ -1,0 +1,58 @@
+package com.wt.entity;
+
+public class Employee {
+	
+	private Integer employeeId;
+	private String emploteeFirstname;
+	private String emploteeLastname;
+	
+	private String email;
+
+	public Integer getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(Integer employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmploteeFirstname() {
+		return emploteeFirstname;
+	}
+
+	public void setEmploteeFirstname(String emploteeFirstname) {
+		this.emploteeFirstname = emploteeFirstname;
+	}
+
+	public String getEmploteeLastname() {
+		return emploteeLastname;
+	}
+
+	public void setEmploteeLastname(String emploteeLastname) {
+		this.emploteeLastname = emploteeLastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Employee(Integer employeeId, String emploteeFirstname,
+			String emploteeLastname, String email) {
+		super();
+		this.employeeId = employeeId;
+		this.emploteeFirstname = emploteeFirstname;
+		this.emploteeLastname = emploteeLastname;
+		this.email = email;
+	}
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+}
