@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.wt.valueStack.City"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>  
@@ -8,6 +11,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<!-- 创建 cities list 的集合 -->
+	<%
+		List<City> cities = new ArrayList<City>();
+		
+		cities.add(new City(1001, "AA"));
+		cities.add(new City(1002, "BB"));
+		cities.add(new City(1003, "CC"));
+		cities.add(new City(1004, "DD"));
+		
+		request.setAttribute("cities", cities);
+	%>
 
 	<h4>Test Form-tag Page</h4><hr/>
 	
@@ -32,6 +47,32 @@
 		
 		<s:checkbox name="married" label="Married"></s:checkbox>
 		
+		<s:radio name="gender" list="#{ '1' : 'Male', '0' : 'Female' }" 
+				label="Gender">
+		</s:radio>
+		
+		<!-- 
+			需要注意的事项 
+			服务端需要使用集合类型，以保证能够被正常的回显！
+		-->
+		<s:checkboxlist name="city" list="#request.cities" listKey="cityId"
+						listValue="cityName" label="City"></s:checkboxlist>
+			
+		<!-- select 标签 -->
+		<!-- 
+			s:optgroup 可以用作 s:select 的子标签，用于显示更多的下拉框
+			注意：必须有键值对，而不能使用一个集合，让其即作为键，又作为值		
+		 -->
+		<!-- 注意事项 ： select 中可以不指定key与value，但是到了 s:optgroup 中则需要指定key与value的值 -->		
+		<s:select list="{11, 12, 13, 14, 15, 16, 17, 18, 19, 20}"
+		 		  headerKey="" headerValue="chose"
+		 		  name="age" label="Age">
+		 	
+		 	<s:optgroup label="21-30" list="#{21 : 21, 22 : 22}"></s:optgroup>	 
+		 	<s:optgroup label="31-40" list="#{31: 31, 32: 32}"></s:optgroup>	  
+		 	
+		</s:select>
+		
 		<s:submit></s:submit>
 		
 	</s:form>
@@ -45,6 +86,8 @@
 		<input type="submit" value="Submit"/>
 		
 	</form>
+	
+	
 	
 
 </body>

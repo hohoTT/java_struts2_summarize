@@ -51,8 +51,27 @@
 				label="Gender">
 		</s:radio>
 		
-		<s:checkboxlist name="cities" list="#request.cities" listKey="cityId"
+		<!-- 
+			需要注意的事项 
+			服务端需要使用集合类型，以保证能够被正常的回显！
+		-->
+		<s:checkboxlist name="city" list="#request.cities" listKey="cityId"
 						listValue="cityName" label="City"></s:checkboxlist>
+			
+		<!-- select 标签 -->
+		<!-- 
+			s:optgroup 可以用作 s:select 的子标签，用于显示更多的下拉框
+			注意：必须有键值对，而不能使用一个集合，让其即作为键，又作为值		
+		 -->
+		<!-- 注意事项 ： select 中可以不指定key与value，但是到了 s:optgroup 中则需要指定key与value的值 -->		
+		<s:select list="{11, 12, 13, 14, 15, 16, 17, 18, 19, 20}"
+		 		  headerKey="" headerValue="chose"
+		 		  name="age" label="Age">
+		 	
+		 	<s:optgroup label="21-30" list="#{21 : 21, 22 : 22}"></s:optgroup>	 
+		 	<s:optgroup label="31-40" list="#{31: 31, 32: 32}"></s:optgroup>	  
+		 	
+		</s:select>
 		
 		<s:submit></s:submit>
 		

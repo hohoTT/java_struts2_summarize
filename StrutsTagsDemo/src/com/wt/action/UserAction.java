@@ -1,5 +1,8 @@
 package com.wt.action;
 
+import java.util.Arrays;
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionContext;
 
 public class UserAction {
@@ -10,8 +13,11 @@ public class UserAction {
 	private String desc;
 
 	private boolean married;
-	
-	
+
+	private String gender;
+	private List<String> city;
+	private String age;
+
 	public String getUserId() {
 		return userId;
 	}
@@ -43,7 +49,7 @@ public class UserAction {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	
+
 	public boolean isMarried() {
 		return married;
 	}
@@ -52,19 +58,43 @@ public class UserAction {
 		this.married = married;
 	}
 
-	public String save(){
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public List<String> getCity() {
+		return city;
+	}
+
+	public void setCity(List<String> city) {
+		this.city = city;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public String save() {
 		System.out.println(this);
-		
+
 		UserAction userAction = new UserAction();
-		
+
 		userAction.setUserId("testId");
 		userAction.setUserName("testName");
 		userAction.setPassword("testPassword");
 		userAction.setDesc("testDesc");
-		
+
 		// 将创建的UserAction放到值栈的栈顶，用于测试表单的回显操作
-		ActionContext.getContext().getValueStack().push(userAction);
-		
+		// ActionContext.getContext().getValueStack().push(userAction);
+
 		return "input";
 	}
 
@@ -72,7 +102,8 @@ public class UserAction {
 	public String toString() {
 		return "UserAction [userId=" + userId + ", userName=" + userName
 				+ ", password=" + password + ", desc=" + desc + ", married="
-				+ married + "]";
+				+ married + ", gender=" + gender + ", city=" + city + ", age="
+				+ age + "]";
 	}
 
 }
