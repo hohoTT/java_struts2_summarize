@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.wt.valueStack.City"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>  
@@ -8,6 +11,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<!-- 创建 cities list 的集合 -->
+	<%
+		List<City> cities = new ArrayList<City>();
+		
+		cities.add(new City(1001, "AA"));
+		cities.add(new City(1002, "BB"));
+		cities.add(new City(1003, "CC"));
+		cities.add(new City(1004, "DD"));
+		
+		request.setAttribute("cities", cities);
+	%>
 
 	<h4>Test Form-tag Page</h4><hr/>
 	
@@ -32,6 +47,13 @@
 		
 		<s:checkbox name="married" label="Married"></s:checkbox>
 		
+		<s:radio name="gender" list="#{ '1' : 'Male', '0' : 'Female' }" 
+				label="Gender">
+		</s:radio>
+		
+		<s:checkboxlist name="cities" list="#request.cities" listKey="cityId"
+						listValue="cityName" label="City"></s:checkboxlist>
+		
 		<s:submit></s:submit>
 		
 	</s:form>
@@ -45,6 +67,8 @@
 		<input type="submit" value="Submit"/>
 		
 	</form>
+	
+	
 	
 
 </body>
