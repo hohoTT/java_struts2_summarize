@@ -7,6 +7,9 @@
 
 	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
 	<constant name="struts.action.extension" value="action,do,"></constant>
+	
+	<!-- 设置当前 Struts2 全局应用的主题 -->
+	<constant name="struts.ui.theme" value="simple"></constant>
 	 
     <package name="default"  namespace="/" extends="struts-default">
     

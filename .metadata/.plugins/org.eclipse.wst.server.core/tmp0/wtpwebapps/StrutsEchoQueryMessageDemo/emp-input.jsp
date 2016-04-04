@@ -12,7 +12,13 @@
 	<h4>Emp Input Page</h4><hr/>
 	
 	<s:debug></s:debug><br/><br/>
+	
+	<%
+		// Struts2 中主题也可利用在request中添加以下的属性进行设置
+		request.setAttribute("theme", "xhtml");
+	%>
 
+	<!-- 可以在 form 标签中设置主题，同时也可在子标签中进行单独的主题设置 -->
 	<s:form action="emp-save">
 		
 		<s:textfield name="name" label="Name"></s:textfield>
