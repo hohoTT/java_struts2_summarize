@@ -1,0 +1,15 @@
+package com.wt.dao;
+
+import java.util.List;
+
+import com.wt.entity.Department;
+
+public class Dao {
+
+	// 获取部门的集合
+	public List<Department> getDepartments(){
+		
+		
+	}
+	
+}

@@ -1,0 +1,22 @@
+package com.wt.dao;
+
+import java.util.List;
+
+import com.wt.entity.Department;
+import com.wt.entity.Role;
+
+public class Dao {
+
+	// 获取部门的集合
+	public List<Department> getDepartments(){
+		
+		return null;
+	}
+	
+	// 获取角色的集合
+	public List<Role> getRoles(){
+		
+		return null;
+	}
+	
+}

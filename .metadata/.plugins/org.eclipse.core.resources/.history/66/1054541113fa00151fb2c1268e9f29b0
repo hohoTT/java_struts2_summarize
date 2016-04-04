@@ -1,0 +1,16 @@
+package com.wt.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+
+public class EmployeeAction implements RequestAware{
+	
+	private Map<String, Object> requestMap = null;
+
+	@Override
+	public void setRequest(Map<String, Object> arg0) {
+		
+	}
+
+}

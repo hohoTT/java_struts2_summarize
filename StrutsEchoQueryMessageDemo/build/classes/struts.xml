@@ -10,7 +10,9 @@
 	 
     <package name="default"  namespace="/" extends="struts-default">
     
-    	
+    	<action name="emp-*" class="com.wt.action.EmployeeAction" method="{1}">
+    		<result name="{1}">/emp-{1}.jsp</result>
+    	</action>
     
     </package>
 

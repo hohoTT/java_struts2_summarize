@@ -1,0 +1,28 @@
+package com.wt.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.wt.entity.Department;
+import com.wt.entity.Role;
+
+public class Dao {
+
+	// 获取部门的集合
+	public List<Department> getDepartments(){
+		
+		// 模拟数据的操作
+		List<Department> departments = new ArrayList<Department>();
+		
+		
+		
+		return departments;
+	}
+	
+	// 获取角色的集合
+	public List<Role> getRoles(){
+		
+		return null;
+	}
+	
+}

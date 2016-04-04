@@ -1,0 +1,10 @@
+package com.wt.entity;
+
+public class Role {
+	
+	private Integer roleId;
+	private String roleName;
+
+	
+	
+}

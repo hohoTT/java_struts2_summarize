@@ -1,0 +1,5 @@
+package com.wt.entity;
+
+public class Role {
+
+}
