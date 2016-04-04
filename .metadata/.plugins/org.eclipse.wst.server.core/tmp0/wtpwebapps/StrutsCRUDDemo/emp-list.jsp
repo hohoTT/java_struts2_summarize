@@ -11,6 +11,20 @@
 
 	<h4>The Emp-List Page</h4><hr/>
 	
+	<h3>以下为添加employee的表单</h3><br/>
+	<s:form action="emp-save">
+		
+		<s:textfield name="firstName" label="FirstName"></s:textfield>
+		<s:textfield name="LastName" label="LastName"></s:textfield>
+		<s:textfield name="email" label="Email"></s:textfield>
+		
+		<s:submit></s:submit>
+		
+	</s:form>
+	
+	<br/><hr/><br/>
+		
+	<h3>以下为显示employee数据</h3><br/>
 	<table cellpadding="10" cellspacing="0" border="1">
 		<thead>
 			<tr>

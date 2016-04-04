@@ -1,0 +1,4 @@
+1. Action 实现 ModelDriven 接口后的流程：
+	
+	<1>. 先会执行 ModelDrivenInterceptor 的 interceptor 方法
+	

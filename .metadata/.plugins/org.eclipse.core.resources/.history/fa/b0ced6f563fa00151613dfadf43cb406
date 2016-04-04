@@ -1,0 +1,24 @@
+1. Action 实现 ModelDriven 接口后的流程：
+	
+	<1>. 先会执行 ModelDrivenInterceptor 的 interceptor 方法
+	
+		public String intercept(ActionInvocation invocation) throws Exception {
+		  	// 获取 Action 对象： EmployeeAction 对象，此时该 Action 已经实现了 ModelDriven 接口
+		  	// public class EmployeeAction implements RequestAware, ModelDriven<Employee>
+	        Object action = invocation.getAction();
+	
+			// 判断 action 是否是 ModelDriven 的实例
+	        if (action instanceof ModelDriven) {
+	            ModelDriven modelDriven = (ModelDriven) action;
+	            ValueStack stack = invocation.getStack();
+	            Object model = modelDriven.getModel();
+	            if (model !=  null) {
+	            	stack.push(model);
+	            }
+	            if (refreshModelBeforeResult) {
+	                invocation.addPreResultListener(new RefreshModelBeforeResult(modelDriven, model));
+	            }
+	        }
+	        return invocation.invoke();
+	    }
+	
