@@ -342,7 +342,21 @@
 		
 		<2>. 在struts.properties文件中,设置以下语句:struts.ui.theme=simple
 		
+	5. 需要注意的是：
 		
+		<1>. Struts2 中全局的默认主题可以在 struts.xml 配置文件中进行修改
+			举例如下：
+			 <!-- 设置当前 Struts2 全局应用的主题 -->
+			<constant name="struts.ui.theme" value="simple"></constant> 
+		
+		<2>. 局部的主题优于全局的主题，如果想一个局部的主题，在局部进行修改即可，此时主题体现的为局部的主题
+		
+		<3>. 局部主题修改的方式注意一下两点：
+		
+			① 可以在 form 标签中设置主题，同时也可在子标签中进行单独的主题设置
+			② Struts2 中主题也可利用在request中添加以下的属性进行设置
+				举例如下： 
+				request.setAttribute("theme", "xhtml");	
 	
 
 
