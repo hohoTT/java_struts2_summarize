@@ -18,9 +18,14 @@
 <fullyQualifiedTypeName name="org.apache.struts2.dispatcher.SessionMap"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.util.ValueStack"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 <fullyQualifiedTypeName name="com.wt.valueStack.Test"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.wt.valueStack.Person"/>
+<fullyQualifiedTypeName name="com.wt.action.UserAction"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 </qualifiedTypeNameHistroy>
