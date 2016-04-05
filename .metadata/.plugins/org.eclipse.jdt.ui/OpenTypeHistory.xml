@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=StrustsCollocationDemo/C:\/Users\/Administrator\/Desktop\/WT\/java_struts2_summarize\/StrustsCollocationDemo\/WebContent\/WEB-INF\/lib\/struts2-core-2.3.15.3.jar&lt;org.apache.struts2.dispatcher(StrutsRequestWrapper.class[StrutsRequestWrapper" modifiers="33" timestamp="1458805825235"/>
+<typeInfo handle="=StrutsTagsDemo/C:\/Users\/Administrator\/Desktop\/WT\/java_struts2_summarize\/StrutsTagsDemo\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.15.3.jar&lt;com.opensymphony.xwork2.interceptor(ModelDrivenInterceptor.class[ModelDrivenInterceptor" modifiers="33" timestamp="1459067060669"/>
+<typeInfo handle="=StrutsTagsDemo/C:\/Users\/Administrator\/Desktop\/WT\/java_struts2_summarize\/StrutsTagsDemo\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.15.3.jar&lt;com.opensymphony.xwork2.interceptor(ParametersInterceptor.class[ParametersInterceptor" modifiers="33" timestamp="1459067060669"/>
 </typeInfoHistroy>
