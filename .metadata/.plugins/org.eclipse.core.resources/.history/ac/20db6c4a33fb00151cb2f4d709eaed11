@@ -72,28 +72,7 @@
    				② 根据 employeeId 从数据库中加载对应的对象，并放入到值栈的栈顶
    				③ 再为栈顶对象的 employeeId 赋值(实际上此时 employeeId 属性值已经存在)
    				④ 把栈顶对象的属性回显在表单中
-   				
-   	<4>. 关于回显：
-   		Struts2 表单标签会从值栈中获取对应的属性值进行回显
-   		
-   	<5>. 存在的问题：
-   		以下为 getModel 方法：
-   		
-	   		public Employee getModel() {
-				if(employeeId == null)
-					employee = new Employee();
-				else
-					employee = dao.get(employeeId);
-				
-				return employee;
-			}
-			
-			① 在执行删除的时候， employeeId 不为 null，但是 getModel 方法却从数据库中加载了一个对象
-				此时不该加载
-			② 在执行查询全部信息时，也 new 创建了一个 employee 对象，此时浪费！
-
-	<6>. 解决方案：
-		使用 PrepareInterceptor 和 Preparable 接口		
+   			
    			
    			
    			

@@ -77,7 +77,7 @@
    		Struts2 表单标签会从值栈中获取对应的属性值进行回显
    		
    	<5>. 存在的问题：
-   		以下为 getModel 方法：
+   		① 在执行删除的时候，getModel 方法
    		
 	   		public Employee getModel() {
 				if(employeeId == null)
@@ -87,13 +87,11 @@
 				
 				return employee;
 			}
-			
-			① 在执行删除的时候， employeeId 不为 null，但是 getModel 方法却从数据库中加载了一个对象
-				此时不该加载
-			② 在执行查询全部信息时，也 new 创建了一个 employee 对象，此时浪费！
-
-	<6>. 解决方案：
-		使用 PrepareInterceptor 和 Preparable 接口		
+   			
+   			I. 在执行删除的时候， employeeId 不为 null，但是 getModel 方法却从数据库中加载了一个对象
+   				此时不该加载
+   			II. 在执行查询全部信息时，也 new 创建了
+   			
    			
    			
    			
