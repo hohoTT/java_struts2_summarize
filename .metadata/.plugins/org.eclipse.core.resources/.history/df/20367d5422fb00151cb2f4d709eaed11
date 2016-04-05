@@ -1,0 +1,116 @@
+package com.wt.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.RequestAware;
+
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ModelDriven;
+import com.wt.dao.Dao;
+import com.wt.entity.Employee;
+
+public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
+	
+	private Dao dao = new Dao();
+	
+	private Map<String, Object> requesetMap;
+	
+	// 1. 需要在当前的 EmployeeAction 定义 employeeId 属性
+	// 用以接受请求参数
+	private Integer employeeId;
+
+	public void setEmployeeId(Integer employeeId) {
+		this.employeeId = employeeId;
+	}
+	
+	// 执行删除操作
+	public String delete() {
+		
+//		dao.delete(employeeId);
+		
+		dao.delete(employee.getEmployeeId());
+		
+		// 返回结果的类型应该为： redirectAction
+		// 也可以是 chain： 实际上 chain 是没有必要的，因为不需要在下一个 Action 中保留 当前的 Action 的状态
+		// 还有，若使用 chain，则到达目标页面后，地址栏显示的依然是 删除 的那个连接，刷新时会有重复的提交
+		// 所以使用 redirectAction
+		return "success";
+	}
+	
+	// 解决代码冗余的办法
+	private Employee employee;
+//	private String firstName;
+//	private String lastName;
+//	private String email;
+//	
+//	public Integer getEmployeeId() {
+//		return employeeId;
+//	}
+//
+//	public String getFirstName() {
+//		return firstName;
+//	}
+//
+//	public void setFirstName(String firstName) {
+//		this.firstName = firstName;
+//	}
+//
+//	public String getLastName() {
+//		return lastName;
+//	}
+//
+//	public void setLastName(String lastName) {
+//		this.lastName = lastName;
+//	}
+//
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
+
+	// 执行添加操作
+	public String save(){
+		
+		// 1. 获取请求参数,通过定义属性的方式
+		
+		// 2. 调用 Dao 的save方法
+//		Employee employee = new Employee(null, firstName, lastName, email);
+//		dao.save(employee);
+		dao.save(employee);
+		
+		// 3. 通过 redirectAction 的方式响应结果给 emp-list
+
+		// 以下用于测试时使用, 证明此时的 employee 为 值栈栈顶的对象
+		System.out.println("employee : " + employee.hashCode());
+		System.out.println("此时值栈栈顶的对象 ：" + ActionContext.getContext().getValueStack().peek().hashCode());
+		
+		return "success";
+	}
+
+	public String list(){
+		
+		requesetMap.put("emps", dao.geteEmployees());
+		
+		return "list";
+	}
+	
+
+	@Override
+	public void setRequest(Map<String, Object> request) {
+		
+		this.requesetMap = request;
+		
+	}
+
+	@Override
+	public Employee getModel() {
+
+		employee = new Employee();
+		
+		return employee;
+	}
+	
+}

@@ -2,6 +2,7 @@ package com.wt.action;
 
 import java.util.Map;
 
+import org.apache.catalina.core.ApplicationContext;
 import org.apache.struts2.interceptor.RequestAware;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -28,7 +29,7 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		
 //		dao.delete(employeeId);
 		
-		dao.delete(employee.getEmployeeId());
+		dao.delete(employeeId);
 		
 		// 返回结果的类型应该为： redirectAction
 		// 也可以是 chain： 实际上 chain 是没有必要的，因为不需要在下一个 Action 中保留 当前的 Action 的状态
@@ -90,11 +91,56 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		return "success";
 	}
 
+	// 显示所有的employee
 	public String list(){
 		
 		requesetMap.put("emps", dao.geteEmployees());
 		
 		return "list";
+	}
+	
+	
+	// 以下回显编辑 employee 的操作
+	public String edit(){
+		
+		// 1. 获取传入的 employeeId : employee.getEmployeeId()
+		
+		
+		// 2. 根据 employeeId 获取 employee 对象
+		
+//		Employee emp = dao.get(employeeId);
+		
+		// 3. 把栈顶对象的属性装配好 : 此时栈顶对象为 employee
+		// 目前的 employee 对象只有 employeeId 属性，其他属性为 null
+		
+		/**
+		 *  Struts2 表单回显时：从值栈栈顶开始查找匹配的属性就添加到 value 属性中
+		 *  
+		 */
+		
+		// 代码冗余的部分，直接放入栈顶即可
+//		employee.setFirstName(emp.getFirstName());
+//		employee.setLastName(emp.getLastName());
+//		employee.setEmail(emp.getEmail());
+		
+		// 不能够进行表单的回显，因为此时经过重新赋值的 employee 对象已经不再是栈顶对象了
+//		employee =  dao.get(employee.getEmployeeId());
+		
+		// 手动的把从数据库中获取的 employee 对象放到值栈的栈顶
+		// 但此时值栈栈顶及第二个对象均为 employee 对象，不够完美
+//		ActionContext.getContext().getValueStack().push(emp);
+		
+		
+		return "edit";
+	}
+	
+	
+	// 以下为修改 employee 的操作
+	public String update(){
+		
+		dao.update(employee);
+		
+		return "success";
 	}
 	
 
@@ -105,10 +151,23 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		
 	}
 
+	// 利用实现 ModelDriven<Employee>解决代码冗余的问题
+	// 将 employee 对象放到栈顶
 	@Override
 	public Employee getModel() {
-
-		employee = new Employee();
+		// 判断是 Create 还是  Edit
+		// 若为 Create，则  employee =  new Employee()
+		// 若为 Edit，则从数据库中获取，employee = dao.get(employeeId)
+		// 判定标准为 是否有 employeeId 这个请求参数
+		// 若有该参数，则视为 Edit；若没有该参数，则视为 Create
+		// 若通过 employeeId 来判断，则需要在 ModelDriven 拦截器之前先执行一个 params 拦截器
+		// 而这可以通过使用 paramsPrepareParams 拦截器实现
+		// 意味着需要在 struts.xml 文件中配置使用 paramsPrepareParams ， 作为默认的拦截器栈
+		
+		if(employeeId == null)
+			employee = new Employee();
+		else
+			employee = dao.get(employeeId);
 		
 		return employee;
 	}

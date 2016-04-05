@@ -13,6 +13,7 @@ public class Dao {
 	
 	// 静态代码块进行 emps 的初始化
 	static{
+		
 		emps.put(1001, new Employee(1001, "AA", "aa", "aa@hohoTT.com"));
 		emps.put(1002, new Employee(1002, "BB", "bb", "bb@hohoTT.com"));
 		emps.put(1003, new Employee(1003, "CC", "cc", "cc@hohoTT.com"));
