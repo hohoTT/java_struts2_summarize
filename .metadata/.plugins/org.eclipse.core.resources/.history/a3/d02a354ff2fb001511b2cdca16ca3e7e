@@ -1,0 +1,6 @@
+username=Username
+password=Password
+submit=Submit
+
+time=Time:{0}
+time2=Time2:${date2}

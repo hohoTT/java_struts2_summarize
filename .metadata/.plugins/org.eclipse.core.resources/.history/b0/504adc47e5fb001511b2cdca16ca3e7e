@@ -1,0 +1,11 @@
+1. 国际化的目标
+
+	<1>. 如何配置国际化资源文件名
+	
+		① Action范围资源文件：
+			    将资源文件放置在Action同级目录下并修改名称为如下格式：
+	          	Action名称_language_country.properties
+	
+	<2>. 如何在页面上和 Action 类中访问国际化资源文件的 value 值
+	
+	<3>. 实现通过超链接切换语言

@@ -1,0 +1,24 @@
+1. 国际化的目标
+
+	<1>. 如何配置国际化资源文件名
+	
+		① Action 范围资源文件：
+			将资源文件放置在 Action 同级目录下并修改名称为如下格式：
+	        	ActionName_language_country.properties
+	        	
+	    ② 包范围资源文件：
+			将资源文件放置在package目录下并修改名称为如下格式：
+		    	packageName_language_country.properties
+			 一旦建立，处于该包下的所有 Action 都可以访问该资源文件。
+			 注意： 包范围资源文件的 baseName 就是 packageName，不是 Action 所在的包名
+			 
+		③ 全局资源文件：
+			命名方式：baseName_language_country.properties
+			strust.xml <constant name="struts.custom.il8n.resources" value="baseName" />
+	    
+	   	④ 国际化资源文件加载的顺序如何 
+	   
+	
+	<2>. 如何在页面上和 Action 类中访问国际化资源文件的 value 值
+	
+	<3>. 实现通过超链接切换语言

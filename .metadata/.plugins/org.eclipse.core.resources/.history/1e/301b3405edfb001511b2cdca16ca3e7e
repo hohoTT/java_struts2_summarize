@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<s:debug></s:debug><br/><br/>
+
+	<h4>Test I18n Page</h4><hr/>
+	
+	<s:form theme="simple">
+		
+		<!-- label 的方式是把 label 写死在标签里 -->
+		<s:textfield name="username" label="username"></s:textfield>
+		
+		<!-- 
+			可以通过 getText 方法进行访问获取 
+			若 label 标签使用 label="%{ getText('username') }" 这样的方式也可以
+			从国际化资源文件中获取 value 值 
+			
+			因为此时在对象栈中有 DefaultTextProvider 的一个实例，该对象中提供了访问国际化资源文件的 getText 方法，
+			同时还需要通知 Struts2 框架 label 中放入的不再是一个普通的字符串，而是一个 OGNL 表达式，
+			所以使用 %{} 把 getText 包装起来，以强制进行 OGNL 的解析
+		-->
+		
+		<!-- 
+			以下注释的部分是
+			
+			<s:textfield name="username" label="%{ getText('username') }"></s:textfield>
+			
+			
+			<!-- key 的方式是直接上资源文件中获取 value 值 -->
+			<!-- 
+			<s:textfield name="username" key="username"></s:textfield>
+		 	<s:password name="password" key="password"></s:password>
+		 	
+		 	<s:submit key="submit"></s:submit>
+		 
+	 	 -->
+	</s:form>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+1. 国际化的目标
+
+	<1>. 如何配置国际化资源文件名
+	
+		① Action 范围资源文件：
+			将资源文件放置在 Action 同级目录下并修改名称为如下格式：
+	        	ActionName_language_country.properties
+	                    一定要特别注意的是国际化资源文件的命名方式，前缀与 Action 类名一致
+	        	
+	    ② 包范围资源文件：
+			将资源文件放置在package目录下并修改名称为如下格式：
+		    	packageName_language_country.properties
+			 一旦建立，处于该包下的所有 Action 都可以访问该资源文件。
+			 注意： 包范围资源文件的 baseName 就是 packageName，不是 Action 所在的包名
+			 
+		③ 全局资源文件：
+			命名方式：baseName_language_country.properties
+			strust.xml <constant name="struts.custom.il8n.resources" value="baseName" />
+	    
+	   	④ 国际化资源文件加载的顺序如何
+	   		离当前 Action 近的，将被优先加载 
+	   
+	
+	<2>. 如何在页面上和 Action 类中访问国际化资源文件的 value 值
+	
+		① 在 Action 类中，若 Action 实现了TextProvider 接口，则可以调用其 getText() 方法获取 value 值
+			通过继承 ActionSupport 接口的方式
+			
+		② 页面上可以使用 s:text 标签；对于表单标签，可以使用表单标签的 key 属性值
+			I. 若有占位符，则可以使用s:text 标签的 s:param 子标签来填充占位符
+			II. 则可以利用标签和 OGNL 表达式 直接访问值栈中的属性值(对象栈和 Map 栈)
+			
+			<!-- 访问带有占位符的 value 值 -->
+			time=Time:{0}
+			
+			<s:text name="time">
+				<s:param value="date"></s:param>
+			</s:text>
+			
+			-----------------------------------------------------
+			
+			
+			<!-- 直接访问值栈中的属性值 -->
+			time2=Time2:${date}
+		
+			<s:text name="time2">
+			</s:text>
+	<3>. 实现通过超链接切换语言
+	
+	
+	
+	
+	
+	
+	
