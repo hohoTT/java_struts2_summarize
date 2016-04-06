@@ -10,8 +10,24 @@
 	
     <package name="default"  namespace="/" extends="struts-default">
     
-    	<!-- 配置使用 paramsPrepareParamsStack 作为默认的拦截器栈 -->
-    	<default-interceptor-ref name="paramsPrepareParamsStack"></default-interceptor-ref>
+    	
+   		<!-- 以下在配置文件中修改 PrepareInterceptor 拦截器栈中的 alwaysInvokePrepare 属性为 false -->
+   		<!-- 按照此时修改的 hohoTTStack 拦截器栈将不执行 prepare 方法 -->
+   		<interceptors>
+		    <interceptor-stack name="hohoTTStack">
+		        <interceptor-ref name="paramsPrepareParamsStack">
+		            <param name="prepare.alwaysInvokePrepare">false</param>
+		        </interceptor-ref>
+		    </interceptor-stack>
+		</interceptors>
+		 
+		<!-- 配置使用的拦截器栈为修改之后的 hohoTTStack -->
+		<default-interceptor-ref name="hohoTTStack"/>
+		
+		<!-- 
+			配置使用 paramsPrepareParamsStack 作为默认的拦截器栈 
+	    	<default-interceptor-ref name="paramsPrepareParamsStack"></default-interceptor-ref>
+	   	-->
    	
    		<!-- 使用通配符的形式进行配置 -->
    		<action name="emp-*" class="com.wt.action.EmployeeAction"

@@ -7,10 +7,11 @@ import org.apache.struts2.interceptor.RequestAware;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Preparable;
 import com.wt.dao.Dao;
 import com.wt.entity.Employee;
 
-public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
+public class EmployeeAction implements RequestAware, ModelDriven<Employee>, Preparable{
 	
 	private Dao dao = new Dao();
 	
@@ -90,6 +91,11 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		
 		return "success";
 	}
+	
+	// 为 save 方法进行前期的准备，准备一个新的 employee 对象，之后进行 employee 的添加操作
+	public void prepareSave() {
+		employee = new Employee();
+	}
 
 	// 显示所有的employee
 	public String list(){
@@ -134,6 +140,11 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		return "edit";
 	}
 	
+	// 为 edit 方法获取需要修改的 employee
+	public void prepareEdit() {
+		employee = dao.get(employeeId);
+	}
+	
 	
 	// 以下为修改 employee 的操作
 	public String update(){
@@ -141,6 +152,11 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		dao.update(employee);
 		
 		return "success";
+	}
+	
+	// 为 update 准备一个新的 employee 对象
+	public void prepareUpdate() {
+		employee = new Employee();
 	}
 	
 
@@ -163,13 +179,24 @@ public class EmployeeAction implements RequestAware, ModelDriven<Employee>{
 		// 若通过 employeeId 来判断，则需要在 ModelDriven 拦截器之前先执行一个 params 拦截器
 		// 而这可以通过使用 paramsPrepareParams 拦截器实现
 		// 意味着需要在 struts.xml 文件中配置使用 paramsPrepareParams ， 作为默认的拦截器栈
-		
-		if(employeeId == null)
-			employee = new Employee();
-		else
-			employee = dao.get(employeeId);
+//		
+//		if(employeeId == null)
+//			employee = new Employee();
+//		else
+//			employee = dao.get(employeeId);
 		
 		return employee;
+	}
+
+	/**
+	 * 	prepare() 方法的主要作用： 为 getModel() 方法准备 model 的
+	 * 
+	 */
+	@Override
+	public void prepare() throws Exception {
+
+		System.out.println("prepare。。。。。。。");
+		
 	}
 	
 }
