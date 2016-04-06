@@ -1,0 +1,12 @@
+package com.wt.entity;
+
+import java.util.Date;
+
+public class Manager {
+	
+	private String name;
+	private Date birth;
+	
+	
+
+}

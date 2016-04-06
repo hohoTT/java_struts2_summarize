@@ -17,6 +17,19 @@
     		<result name="input">/index.jsp</result>
     		
     	</action>
+    	
+    	<action name="testComplextProperty"
+    			class="com.wt.action.TestComplextPropertyAction">
+    	
+    		<result>/success.jsp</result>
+    			
+    	</action>
+    	
+    	<action name="testComplextCollection" class="com.wt.action.TestCollectionAction">
+    	
+    		<result>/success.jsp</result>
+    		
+    	</action>
     
     </package>
 

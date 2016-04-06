@@ -1,0 +1,10 @@
+package com.wt.entity;
+
+public class Department {
+	
+	private Integer id;
+	private String deptName;
+
+	private Manager manager;
+	
+}
