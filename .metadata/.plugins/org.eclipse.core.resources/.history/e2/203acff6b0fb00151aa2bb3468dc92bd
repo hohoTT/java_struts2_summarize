@@ -1,0 +1,9 @@
+package com.wt.action;
+
+public class ConversionAction {
+
+	private int age;
+	
+	
+	
+}

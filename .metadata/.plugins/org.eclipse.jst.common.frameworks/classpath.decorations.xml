@@ -10,4 +10,10 @@
       <source-attachment-path>D:/备份/F盘备份/struts2/struts-2.3.15.3-all.zip</source-attachment-path>
     </entry>
   </container>
+  <container id="StrutsTypeTransformDemo!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/Administrator/Desktop/WT/java_struts2_summarize/StrutsTypeTransformDemo/WebContent/WEB-INF/lib/xwork-core-2.3.15.3.jar">
+      <source-attachment-path>D:/备份/F盘备份/struts2/struts-2.3.15.3-all.zip</source-attachment-path>
+      <attribute name="source_encoding">UTF-8</attribute>
+    </entry>
+  </container>
 </classpath>

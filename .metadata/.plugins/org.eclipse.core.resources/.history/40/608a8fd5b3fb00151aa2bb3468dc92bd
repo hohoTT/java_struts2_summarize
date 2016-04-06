@@ -1,0 +1,11 @@
+1. 如果类型转换失败：
+
+	<1>. 若 Action 类没有实现 ValidationAware 接口： Struts 在遇到 类型转换错误时仍会调用其 action 方法，
+	就好像什么都没有发生过一样
+	
+	<2>. 若 Action 类实现  ValidationAware  接口： Struts 在遇到 类型转换错误时不会调用其 action 方法，
+	
+		继承 ActionSupport 间接实现 ValidationAware 接口
+		
+	<3>. 若字段标签不是 simple 主题，则会显示如下的出错消息：
+		Invalid field value for field "age".
