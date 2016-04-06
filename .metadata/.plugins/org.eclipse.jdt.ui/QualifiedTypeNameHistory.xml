@@ -35,5 +35,6 @@
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ModelDriven"/>
 <fullyQualifiedTypeName name="com.wt.entity.Employee"/>
 <fullyQualifiedTypeName name="java.applet.AppletContext"/>
+<fullyQualifiedTypeName name="org.apache.catalina.core.ApplicationContext"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 </qualifiedTypeNameHistroy>
