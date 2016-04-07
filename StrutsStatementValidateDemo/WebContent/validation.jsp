@@ -11,9 +11,11 @@
 	
 	<s:debug></s:debug><br/>
 	
-	<h4>Test Validation Page</h4><hr/>
+	<h4>Test Validation2 Page</h4><hr/>
 
 	<h4>以下为 xhtml 主题的表单</h4><hr/>
+	
+	<!-- 要求年龄必须在 20-50 之间的要求 -->
 	<s:form action="testValidationAction">
 		
 		<s:textfield name="age" label="Age"></s:textfield><br/><br/>

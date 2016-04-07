@@ -16,6 +16,13 @@
 			<!-- 若验证失败转向的 input-->
 			<result name="input">/validation.jsp</result>
 		</action>
+		
+		<action name="testValidationAction2" class="com.wt.action.TestValidationAction">
+			<result>/success.jsp</result>
+			
+			<!-- 若验证失败转向的 input-->
+			<result name="input">/validation2.jsp</result>
+		</action>
     
     </package>
 
