@@ -11,12 +11,9 @@
 
 	<s:debug></s:debug><br/>
 	
-	<!-- 以下是用作超链接的部分 -->
-	<a href="testI18n.action?request_locale=zh_CN">中文</a><br/>
-	<a href="testI18n.action?request_locale=en_US">English</a><br/>
 	
-	
-	<a href="index.jsp">Index Page</a><br/>
+	<a href=""></a><br/>
+	<a href=""></a><br/>
 	
 	
 	
