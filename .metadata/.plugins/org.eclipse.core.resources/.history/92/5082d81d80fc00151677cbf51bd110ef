@@ -65,9 +65,6 @@
 				<a href="testI18n.action?request_locale=zh_CN">中文</a><br/>
 				<a href="testI18n.action?request_locale=en_US">English</a><br/>
 				
-			需要注意的地方：
-				超链接必须是一个 Struts2 的请求，即 使 i18n 拦截器工作
-				
 			
 			
 		

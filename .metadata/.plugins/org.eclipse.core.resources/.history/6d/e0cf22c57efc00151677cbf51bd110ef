@@ -52,22 +52,6 @@
 		
 		③ 具体确定 Local 对象的过程：
 			
-			I. Struts2 使用i18n 拦截器 处理国际化，并且将其注册在默认的拦截器栈中
-			II. i18n 拦截器在执行 Action 方法前，自动查找请求中一个名为 request_locale 的参数
-				如果该参数存在，拦截器就将其作为参数，转换为 Locale 对象，并将其设为用户默认的 Locale(代表国家/语言环境)
-				并把其设置为 session 的 WW_TRANS_I18N_LOCALE 属性
-			III. 若 request 没有名为 request_local 的参数，则 i18n 拦截器会从 Session 中获取 WW_TRANS_I18N_LOCALE 的属性值
-				  若该值不为空，则将该属性值设置为浏览器的默认 Locale
-			IV. 若 session 中的 WW_TRANS_I18N_LOCALE 属性值为空，则从 ActionContext 中获取 Locale 对象
-		
-		④ 具体实现： 只需要在超链接的后面添加 request_locale 的请求参数，值是 语言代码
-			具体实现代码如下：
-				<a href="testI18n.action?request_locale=zh_CN">中文</a><br/>
-				<a href="testI18n.action?request_locale=en_US">English</a><br/>
-				
-			需要注意的地方：
-				超链接必须是一个 Struts2 的请求，即 使 i18n 拦截器工作
-				
 			
 			
 		

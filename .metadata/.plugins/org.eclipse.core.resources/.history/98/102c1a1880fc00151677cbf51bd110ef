@@ -60,13 +60,10 @@
 				  若该值不为空，则将该属性值设置为浏览器的默认 Locale
 			IV. 若 session 中的 WW_TRANS_I18N_LOCALE 属性值为空，则从 ActionContext 中获取 Locale 对象
 		
-		④ 具体实现： 只需要在超链接的后面添加 request_locale 的请求参数，值是 语言代码
+		④ 具体实现： 只需要在超链接的后面添加 request_locale 的请求参数，值是
 			具体实现代码如下：
 				<a href="testI18n.action?request_locale=zh_CN">中文</a><br/>
 				<a href="testI18n.action?request_locale=en_US">English</a><br/>
-				
-			需要注意的地方：
-				超链接必须是一个 Struts2 的请求，即 使 i18n 拦截器工作
 				
 			
 			
