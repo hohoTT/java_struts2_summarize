@@ -7,7 +7,7 @@
 
 以下各个例子中为 Struts2 的用法介绍：
 
-### 一、项目StrustsCollocationDemo与Struts2One的比较(即使用了Struts2框架与没有使用Struts2框架的比较)
+## 一、项目StrustsCollocationDemo与Struts2One的比较(即使用了Struts2框架与没有使用Struts2框架的比较)
 1. 与之前 Filter 作为控制器实现 MVC的区别
 
 	1>. 搭建 Struts 的开发环境
@@ -36,7 +36,12 @@
 	
 	在 Product 中定义一个 save 方法
 
+## 二、 Struts2 的运行流程分析如下
+	
+	![](https://github.com/hohoTT/java_struts2_summarize/blob/master/img/strust2_theory.png)
+
 --------------------------------------------------------------------------------------------------------------------------------------
+## 三、 Struts2 中各个部分的分析及讲解
 
 ### 1. 搭建 Struts2 的开发环境： 三个步骤
 
