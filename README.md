@@ -40,8 +40,10 @@
 	一个请求在Struts2框架中的处理大概分为以下几个步骤：
 
 	1 客户端发送请求；
-	2 这个请求经过一系列的过滤器（Filter）（这些过滤器中有一个叫做ActionContextCleanUp的可选过滤器，这个过滤器对于Struts2和其他框架的集成很有帮助，例如：SiteMesh Plugin）
-	3 接着FilterDispatcher被调用，FilterDispatcher询问ActionMapper来决定这个请是否需要调用某个Action。FilterDispatcher的功能如下：
+	2 这个请求经过一系列的过滤器（Filter）（这些过滤器中有一个叫做ActionContextCleanUp的可选过滤器，
+	这个过滤器对于Struts2和其他框架的集成很有帮助，例如：SiteMesh Plugin）
+	3 接着FilterDispatcher被调用，FilterDispatcher询问ActionMapper来决定这个请是否需要调用某个Action。
+	FilterDispatcher的功能如下：
 	
 	        (1)执行Actions
 	        (2)清除ActionContext
@@ -52,7 +54,9 @@
 	5 ActionProxy通过Configuration Manager询问框架的配置文件，找到需要调用的Action类
 	6 ActionProxy创建一个ActionInvocation的实例。
 	7 ActionInvocation实例使用命名模式来调用，在调用Action的过程前后，涉及到相关拦截器（Intercepter）的调用。
-	8 一旦Action执行完毕，ActionInvocation负责根据struts.xml中的配置找到对应的返回结果。返回结果通常是（但不总是，也可 能是另外的一个Action链）一个需要被表示的JSP或者FreeMarker的模版。在表示的过程中可以使用Struts2 框架中继承的标签。在这个过程中需要涉及到ActionMapper
+	8 一旦Action执行完毕，ActionInvocation负责根据struts.xml中的配置找到对应的返回结果。返回结果通常是
+	（但不总是，也可 能是另外的一个Action链）一个需要被表示的JSP或者FreeMarker的模版。
+	在表示的过程中可以使用Struts2 框架中继承的标签。在这个过程中需要涉及到ActionMapper
 	
 	拦截器与过滤器：
 	
@@ -63,7 +67,15 @@
 		5、在Action的生命周期中，拦截器可以多次调用，而过滤器只能在容器初始化时被调用一次。
 		
 	在上述过程中所有的对象（Action，Results，Interceptors，等）都是通过ObjectFactory来创建的。
-	Struts2的目标很简单--使Web开发变得更加容易。为了达成这一目标，Struts2中提供了很多新特性，比如智能的默认设置、annotation的使用以及"惯例重于配置"原则的应用，而这一切都大大减少了XML配置。Struts2中的Action都是POJO，这一方面增强了Action本身的可测试性，另一方面也减小了框架内部的耦合度，而HTML表单中的输入项都被转换成了恰当的类型以供action使用。开发人员还可以通过拦截器（可以自定义拦截器或者使用Struts2提供的拦截器）来对请求进行预处理和后处理，这样一来，处理请求就变得更加模块化，从而进一步减小耦合度。模块化是一个通用的主题--可以通过插件机制来对框架进行扩展；开发人员可以使用自定义的实现来替换掉框架的关键类，从而获得框架本身所不具备的功能；可以用标签来渲染多种主题（包括自定义的主题）；Action执行完毕以后，可以有多种结果类型--包括渲染JSP页面，Velocity和Freemarker模板，但并不仅限于这些。
+	
+	Struts2的目标很简单--使Web开发变得更加容易。为了达成这一目标，Struts2中提供了很多新特性，
+	比如智能的默认设置、annotation的使用以及"惯例重于配置"原则的应用，而这一切都大大减少了XML配置。
+	Struts2中的Action都是POJO，这一方面增强了Action本身的可测试性，另一方面也减小了框架内部的耦合度，
+	而HTML表单中的输入项都被转换成了恰当的类型以供action使用。开发人员还可以通过拦截器（可以自定义拦截器或者使用
+	Struts2提供的拦截器）来对请求进行预处理和后处理，这样一来，处理请求就变得更加模块化，从而进一步减小耦合度。
+	模块化是一个通用的主题--可以通过插件机制来对框架进行扩展；开发人员可以使用自定义的实现来替换掉框架的关键类，
+	从而获得框架本身所不具备的功能；可以用标签来渲染多种主题（包括自定义的主题）；Action执行完毕以后，可以有多种
+	结果类型--包括渲染JSP页面，Velocity和Freemarker模板，但并不仅限于这些。
 
 --------------------------------------------------------------------------------------------------------------------------------------
 ## 三、 Struts2 中各个部分的分析及讲解
