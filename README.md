@@ -37,8 +37,8 @@
 	在 Product 中定义一个 save 方法
 
 ## 二、 Struts2 的运行流程分析如下
-	流程如如下：
-	![](https://github.com/hohoTT/java_struts2_summarize/blob/master/img/strust2_theory.png)
+	流程图如下：
+	![](https://raw.githubusercontent.com/hohoTT/java_struts2_summarize/master/img/strust2_theory.jpg)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 ## 三、 Struts2 中各个部分的分析及讲解
