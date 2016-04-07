@@ -83,7 +83,8 @@
 			其中的参考代码
 				<validator name="int" class="com.opensymphony.xwork2.validator.validators.IntRangeFieldValidator"/>
     
-			
+		
+2. struts2/struts-2.3.15.3/docs/WW/docs/validation.html 文档下提供了15中的验证规则	
 		   	
 			
 		

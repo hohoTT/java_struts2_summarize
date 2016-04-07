@@ -3,7 +3,8 @@
         "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
 
 <validators>
-	
+
+    
 	<!-- 针对于 age 属性进行验证，基于字段的验证 -->
 	<field name="age">
          <field-validator type="int">
@@ -11,6 +12,13 @@
              <param name="max">50</param>
              <message>^^Age needs to be between ${min} and ${max}</message>
          </field-validator>
+         
+         <!-- 以下是类型转换出错的标记 -->
+         <!-- 设置短路验证  short-circuit="true" -->
+         <field-validator type="conversion" short-circuit="true">
+	        <message>^Conversion Error Occurred</message>
+	     </field-validator>
+	
      </field>
 	
 </validators>

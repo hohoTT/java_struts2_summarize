@@ -67,3 +67,6 @@
 127.0.0.1 - - [07/Apr/2016:20:00:52 +0800] "GET /StrutsStatementValidateDemo/validation2.jsp HTTP/1.1" 200 332210
 127.0.0.1 - - [07/Apr/2016:20:00:55 +0800] "POST /StrutsStatementValidateDemo/testValidationAction2 HTTP/1.1" 200 296
 127.0.0.1 - - [07/Apr/2016:20:00:59 +0800] "POST /StrutsStatementValidateDemo/testValidationAction2 HTTP/1.1" 200 335920
+127.0.0.1 - - [07/Apr/2016:20:27:31 +0800] "POST /StrutsStatementValidateDemo/testValidationAction.action HTTP/1.1" 200 336447
+127.0.0.1 - - [07/Apr/2016:20:30:13 +0800] "GET /StrutsStatementValidateDemo/validation.jsp HTTP/1.1" 200 332203
+127.0.0.1 - - [07/Apr/2016:20:30:16 +0800] "POST /StrutsStatementValidateDemo/testValidationAction HTTP/1.1" 200 336716
