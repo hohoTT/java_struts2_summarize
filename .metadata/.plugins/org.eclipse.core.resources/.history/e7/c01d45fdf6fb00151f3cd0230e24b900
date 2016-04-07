@@ -16,7 +16,7 @@
 		③ 全局资源文件：
 			命名方式：baseName_language_country.properties
 			strust.xml <constant name="struts.custom.il8n.resources" value="baseName" />
-	    	
+	    
 	   	④ 国际化资源文件加载的顺序如何
 	   		离当前 Action 近的，将被优先加载 
 	   
