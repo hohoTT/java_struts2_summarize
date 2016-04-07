@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StrutsStatementValidateDemo/src/com/wt/action/Login-validation.xml&apos; to &apos;TestValidationAction-validation.xml&apos;" description="Rename resource &apos;Login-validation.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/wt/action/Login-validation.xml" name="TestValidationAction-validation.xml" stamp="1460027115258" updateReferences="true"/>
+</session>

@@ -1,0 +1,16 @@
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+	
+	<!-- 只对于 age 属性进行验证 -->
+	<field name="age">
+         <field-validator type="int">
+             <param name="min">20</param>
+             <param name="max">50</param>
+             <message>Age needs to be between ${min} and ${max}</message>
+         </field-validator>
+     </field>
+	
+</validators>

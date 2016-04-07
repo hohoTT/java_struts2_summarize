@@ -10,7 +10,12 @@
 	 
     <package name="default"  namespace="/" extends="struts-default">
 
-		
+		<action name="testValidationAction" class="com.wt.action.TestValidationAction">
+			<result>/success.jsp</result>
+			
+			<!-- 若验证失败转向的 input-->
+			<result name="input">/validation.jsp</result>
+		</action>
     
     </package>
 

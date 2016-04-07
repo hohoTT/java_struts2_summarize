@@ -1,0 +1,28 @@
+1. Struts2 的验证：
+
+	<1>. 验证分为两种：
+		
+		① 声明式验证(推荐使用)
+		
+			I. 对哪个 Action 或 Model 的哪个字段进行验证
+			II. 使用什么验证规则
+			III. 如果验证失败，转向哪一个页面，显示是什么错误消息
+		
+		② 编程式验证
+		
+	<2>. 声明式验证的 helloworld
+	
+		① 先明确对哪一个 Action 的哪一个字段进行验证： age
+		
+		② 需要编写配置文件：
+		
+			I. 把 struts2\struts-2.3.15.3\apps\struts2-blank\WEB-INF\classes\example 
+				路径下的 Login-validation.xml 文件复制到当前 Action 所在的包下
+			II. 把该配置文件改为 ： 把 Login 改为当前 Action 的名字
+			III.编写验证规则 ： 参见 struts2/struts-2.3.15.3/docs/WW/docs/int-validator.html 中的文档即可
+			
+		③ 若验证失败
+			
+		
+		
+		
